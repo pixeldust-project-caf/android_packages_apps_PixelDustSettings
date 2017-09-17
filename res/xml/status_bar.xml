@@ -41,6 +41,12 @@
         android:title="@string/status_bar_clock_title" />
 
     <com.pixeldust.support.preference.CardviewPreference
+        android:key="traffic"
+        android:fragment="com.pixeldust.settings.fragments.Traffic"
+        android:icon="@drawable/ic_traffic_indicators"
+        android:title="@string/traffic_title" />
+
+    <com.pixeldust.support.preference.CardviewPreference
         android:key="misc_extensions"
         android:fragment="com.pixeldust.settings.fragments.MiscExtensions"
         android:icon="@drawable/ic_misc_extensions"

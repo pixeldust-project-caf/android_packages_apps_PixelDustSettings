@@ -76,7 +76,7 @@
     <string name="pixeldust_changelog_error">Unable to load changelog</string>
 
     <!-- Misc Extensions -->
-    <string name="misc_extensions_title">Miscellaneous</string>
+    <string name="misc_extensions_title">Misc Extensions</string>
 
     <!-- Lockscreen UI -->
     <string name="lockscreen_ui_title">Lockscreen UI</string>
@@ -238,4 +238,10 @@
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>
     <string name="clock_date_position">Date position</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="traffic_title">Traffic Indicators</string>
+    <string name="network_traffic_state_title">Network traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 </resources>
