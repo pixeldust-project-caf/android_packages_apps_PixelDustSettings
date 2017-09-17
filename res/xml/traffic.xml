@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2021 The PixelDust Project
+<!-- Copyright (C) 2021-2022 The PixelDust Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -12,7 +12,7 @@
 -->
 
 <PreferenceScreen
-    android:title="@string/network_traffic_state_title"
+    android:title="@string/traffic_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
@@ -22,5 +22,18 @@
         android:summary="@string/data_activity_arrow_summary"
         android:defaultValue="true"
         android:persistent="false" />
+
+    <com.pixeldust.support.preference.SystemSettingSwitchPreference
+        android:key="network_traffic_state"
+        android:title="@string/network_traffic_state_title"
+        android:defaultValue="false" />
+
+    <com.pixeldust.support.preference.CustomSeekBarPreference
+        android:key="network_traffic_autohide_threshold"
+        android:title="@string/network_traffic_autohide_threshold_title"
+        android:max="10"
+        settings:min="0"
+        settings:units="KB/s"
+        android:defaultValue="0" />
 
 </PreferenceScreen>
