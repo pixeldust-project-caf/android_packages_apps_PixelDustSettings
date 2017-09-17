@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,8 +55,12 @@ import java.util.regex.Pattern;
 public class Traffic extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String DATA_ACTIVITY_ARROW  = "data_activity_arrow";
+    private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
+    private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
 
     private SwitchPreference mShowCAFArrows;
+    private CustomSeekBarPreference mThreshold;
+    private SystemSettingSwitchPreference mNetMonitor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +76,19 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
         mShowCAFArrows = (SwitchPreference) findPreference(DATA_ACTIVITY_ARROW);
         mShowCAFArrows.setChecked(cafValue != 0);
         mShowCAFArrows.setOnPreferenceChangeListener(this);
+
+        boolean isNetMonitorEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_STATE, 1, UserHandle.USER_CURRENT) == 1;
+        mNetMonitor = (SystemSettingSwitchPreference) findPreference("network_traffic_state");
+        mNetMonitor.setChecked(isNetMonitorEnabled);
+        mNetMonitor.setOnPreferenceChangeListener(this);
+
+        int trafvalue = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1, UserHandle.USER_CURRENT);
+        mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
+        mThreshold.setValue(trafvalue);
+        mThreshold.setOnPreferenceChangeListener(this);
+        mThreshold.setEnabled(isNetMonitorEnabled);
     }
 
     @Override
@@ -86,11 +103,26 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mShowCAFArrows) {
             int val = ((Boolean) objValue) ? 1 : 0;
-            Settings.System.putInt(getContentResolver(),
+            Settings.System.putInt(resolver,
                     Settings.System.DATA_ACTIVITY_ARROW, val);
             PixeldustUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        } else if (preference == mNetMonitor) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.NETWORK_TRAFFIC_STATE, value ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+            mNetMonitor.setChecked(value);
+            mThreshold.setEnabled(value);
+            return true;
+        } else if (preference == mThreshold) {
+            int val = (Integer) objValue;
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
+                    UserHandle.USER_CURRENT);
             return true;
         }
         return false;

@@ -392,4 +392,10 @@
 
     <string name="use_photos_spoof_title">Unbegrenzter Google Fotos Speicherplatz</string>
     <string name="use_photos_spoof_summary">Dein Gerät wird als Pixel XL ausgewiesen, um kostenlos Videos und Fotos in verlustfreier Qualität in Google Fotos zu speichern</string>
+
+    <!-- Network Traffic -->
+    <string name="traffic_title">Netzwerkaktivität</string>
+    <string name="traffic_summary">Netzwerkaktivitätsanzeige anpassen</string>
+    <string name="network_traffic_state_title">Netzwerkaktivität anzeigen</string>
+    <string name="network_traffic_autohide_threshold_title">Netzwerkaktivität anzeigen ab</string>
 </resources>
