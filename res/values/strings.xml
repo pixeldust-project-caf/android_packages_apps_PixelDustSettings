@@ -43,6 +43,10 @@
     <string name="build_tweaks_summary_title">Extend your device!</string>
     <string name="listview">ListView</string>
 
+    <!-- Frags -->
+    <!-- Buttons -->
+    <string name="buttons_title">Buttons</string>
+
     <!-- Quick Settings -->
     <string name="quick_settings_title">Quick Settings</string>
 
