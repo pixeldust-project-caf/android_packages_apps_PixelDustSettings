@@ -35,6 +35,7 @@
     <string name="colors_title">Colors</string>
 
     <!-- PixelDustSettings categories -->
+    <string name="fingerprint_category">Fingerprint</string>
     <string name="gestures_category">Gestures</string>
     <string name="status_bar_category">Statusbar</string>
     <string name="notifications_panel_category">QS panel</string>
@@ -163,4 +164,10 @@
     <string name="lockscreen_media_blur_title">Media art blur level</string>
     <string name="show_lockscreen_media_art_title">Show media art</string>
     <string name="lockscreen_media_art_options_title">Lockscreen media art</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Fingerprint success vibration</string>
+    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+    <string name="fprint_error_vib_title">Fingerprint error vibration</string>
+    <string name="fprint_error_vib_summary">Vibrate on failed fingerprint authentication</string>
 </resources>
