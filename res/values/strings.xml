@@ -84,8 +84,8 @@
     <!-- Lockscreen icons -->
     <string name="lockscreen_shortcuts">Lockscreen Shortcuts</string>
 
-    <!-- Lockscreen icons -->
-    <string name="lockscreen_tuner_title">Lockscreen Shortcuts</string>
+    <!-- Navigation -->
+    <string name="navigationbar_settings_title">Navigation Bar</string>
 
     <!-- Statusbar Items -->
     <string name="statusbar_items_category">Statusbar Items</string>
