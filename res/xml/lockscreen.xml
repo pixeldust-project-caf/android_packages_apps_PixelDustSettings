@@ -25,5 +25,11 @@
          android:icon="@drawable/ic_lockscreen_ui"
          android:title="@string/lockscreen_ui_title" />
 
+     <com.pixeldust.support.preference.CardviewPreference
+         android:key="lockscreen_shortcuts"
+         android:fragment="com.pixeldust.settings.fragments.LockscreenShortcuts"
+         android:icon="@drawable/ic_lockscreen_shortcuts"
+         android:title="@string/lockscreen_shortcuts" />
+
 </PreferenceScreen>
 

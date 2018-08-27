@@ -78,6 +78,15 @@
     <!-- Lockscreen UI -->
     <string name="lockscreen_ui_title">Lockscreen UI</string>
 
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_shortcuts">Lockscreen Shortcuts</string>
+
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen Shortcuts</string>
+
+    <!-- Statusbar Items -->
+    <string name="statusbar_items_category">Statusbar Items</string>
+
     <!-- Quick Settings -->
     <string name="quick_settings_title">Quick Settings</string>
 
