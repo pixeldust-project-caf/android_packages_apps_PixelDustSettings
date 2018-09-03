@@ -19,6 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+     <com.pixeldust.support.preference.CardviewPreference
+         android:key="lockscreen_ui"
+         android:fragment="com.pixeldust.settings.fragments.LockscreenUI"
+         android:icon="@drawable/ic_lockscreen_ui"
+         android:title="@string/lockscreen_ui_title" />
 
 </PreferenceScreen>
 

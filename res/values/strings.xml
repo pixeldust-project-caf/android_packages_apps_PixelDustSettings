@@ -40,12 +40,18 @@
     <string name="system_category">System</string>
     <string name="lockscreen_category">Lockscreen</string>
     <string name="navigation_and_recents_category">Navigation</string>
-    <string name="build_tweaks_summary_title">Extend your device!</string>
+    <string name="build_tweaks_summary_title">Dustify your device!</string>
     <string name="listview">ListView</string>
 
     <!-- Frags -->
     <!-- Buttons -->
     <string name="buttons_title">Buttons</string>
+
+    <!-- Misc Extensions -->
+    <string name="misc_extensions_title">Miscellaneous</string>
+
+    <!-- Lockscreen UI -->
+    <string name="lockscreen_ui_title">Lockscreen UI</string>
 
     <!-- Quick Settings -->
     <string name="quick_settings_title">Quick Settings</string>

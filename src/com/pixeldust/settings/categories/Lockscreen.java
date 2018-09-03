@@ -42,7 +42,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.EXTENSIONS;
+        return MetricsProto.MetricsEvent.PIXELDUST;
     }
 
     @Override
