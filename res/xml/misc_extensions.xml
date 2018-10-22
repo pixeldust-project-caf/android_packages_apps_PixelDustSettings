@@ -51,6 +51,12 @@
             android:summaryOff="@string/location_privacy_indicator_summary_off"
             android:defaultValue="true" />
 
+         <com.pixeldust.support.preference.SystemSettingSwitchPreference
+             android:key="volte_icon"
+             android:title="@string/volte_icon_title"
+             android:summary="@string/volte_icon_summary"
+             android:defaultValue="true"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
