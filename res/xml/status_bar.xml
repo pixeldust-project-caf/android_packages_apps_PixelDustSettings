@@ -35,6 +35,12 @@
         android:title="@string/carrier_label_settings_title" />
 
     <com.pixeldust.support.preference.CardviewPreference
+        android:key="status_bar_clock"
+        android:fragment="com.pixeldust.settings.fragments.ClockDateSettings"
+        android:icon="@drawable/ic_clock_settings"
+        android:title="@string/status_bar_clock_title" />
+
+    <com.pixeldust.support.preference.CardviewPreference
         android:key="misc_extensions"
         android:fragment="com.pixeldust.settings.fragments.MiscExtensions"
         android:icon="@drawable/ic_misc_extensions"
