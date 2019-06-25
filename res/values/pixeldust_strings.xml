@@ -662,4 +662,9 @@
     <string name="qs_tile_style_oreo_squircle_trim">Squircle Trim (Oreo)</string>
     <string name="theme_accent_picker_default">Default</string>
 
+    <!-- Lockscreen cover art filter -->
+    <string name="lockscreen_cover_filter_title">Media cover art filter</string>
+    <string name="lockscreen_cover_filter_none">None</string>
+    <string name="lockscreen_cover_filter_grayscale">Grayscale</string>
+    <string name="lockscreen_cover_filter_blur">Blur</string>
 </resources>
