@@ -29,6 +29,12 @@
     </com.pixeldust.support.preference.CardviewPreference>
 
     <com.pixeldust.support.preference.CardviewPreference
+        android:key="carrier_label"
+        android:fragment="com.pixeldust.settings.fragments.CarrierLabel"
+        android:icon="@drawable/ic_carrier_label"
+        android:title="@string/carrier_label_settings_title" />
+
+    <com.pixeldust.support.preference.CardviewPreference
         android:key="misc_extensions"
         android:fragment="com.pixeldust.settings.fragments.MiscExtensions"
         android:icon="@drawable/ic_misc_extensions"
