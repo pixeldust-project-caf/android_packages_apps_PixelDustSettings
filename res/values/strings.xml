@@ -321,4 +321,8 @@
     <!-- Show VoWiFi icon on statusbar -->
     <string name="vowifi_icon_title">VoWiFi icon</string>
     <string name="vowifi_icon_summary">Display VoWiFi icon</string>
+
+    <!-- Navigation bar -->
+    <string name="navigation_bar_title">On-screen navigation bar</string>
+    <string name="navigation_bar_summary">Enable on-screen navigation keys</string>
 </resources>
