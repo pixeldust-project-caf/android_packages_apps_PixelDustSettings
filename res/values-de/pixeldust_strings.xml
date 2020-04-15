@@ -690,4 +690,8 @@
     <string name="audio_panel_theme_aosp">Stock</string>
     <string name="audio_panel_theme_custom">Rund</string>
 
+    <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">IME-Tastenbereich</string>
+    <string name="navigation_bar_ime_space_summary">IME-Tastenbereich unter der Tastatur anzeigen</string>
+
 </resources>
