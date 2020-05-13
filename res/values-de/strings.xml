@@ -398,4 +398,7 @@
     <string name="traffic_summary">Netzwerkaktivitätsanzeige anpassen</string>
     <string name="network_traffic_state_title">Netzwerkaktivität anzeigen</string>
     <string name="network_traffic_autohide_threshold_title">Netzwerkaktivität anzeigen ab</string>
+    <string name="network_traffic_location_title">Verortung</string>
+    <string name="network_traffic_statusbar">Statusleiste</string>
+    <string name="network_traffic_qs_header">Erweiterte Statusleiste</string>
 </resources>
