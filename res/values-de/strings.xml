@@ -402,4 +402,8 @@
     <string name="network_traffic_statusbar">Statusleiste</string>
     <string name="network_traffic_qs_header">Erweiterte Statusleiste</string>
     <string name="network_traffic_refresh_interval_title">Aktualisierungsintervall</string>
+    <string name="network_traffic_mode_title">Display mode</string>
+    <string name="network_traffic_dynamic">Dynamisch</string>
+    <string name="network_traffic_download">Download</string>
+    <string name="network_traffic_upload">Upload</string>
 </resources>
