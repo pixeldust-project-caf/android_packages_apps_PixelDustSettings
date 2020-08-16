@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017-2020 The PixelDust Project
+ * Copyright (C) 2017-2019 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,31 +22,18 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Surface;
-
-import androidx.preference.Preference;
-import androidx.preference.PreferenceScreen;
-
-import com.android.internal.util.hwkeys.ActionUtils;
+import android.preference.Preference;
 import com.android.settings.R;
+
 import com.android.settings.SettingsPreferenceFragment;
 
 public class PixelDustSettings extends SettingsPreferenceFragment {
-
-    private static final String NAVBAR_SETTINGS = "navigationbar_category";
-    private Preference mNavbarSettings;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.pixeldust_settings);
-        final PreferenceScreen prefScreen = getPreferenceScreen();
-
-        mNavbarSettings = (Preference) findPreference(NAVBAR_SETTINGS);
-
-        if (!ActionUtils.hasNavbarByDefault(getActivity())) {
-            prefScreen.removePreference(mNavbarSettings);
-        }
     }
 
     @Override
