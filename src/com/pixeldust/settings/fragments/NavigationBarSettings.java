@@ -34,7 +34,6 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.hwkeys.ActionUtils;
 import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -83,15 +82,6 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
 
         // Navigation bar related options
         mEnableNavigationBar = (SwitchPreference) findPreference(ENABLE_NAV_BAR);
-
-        // Only visible on devices that have a navigation bar already
-        if (ActionUtils.hasNavbarByDefault(getActivity())) {
-            mEnableNavigationBar.setOnPreferenceChangeListener(this);
-            mHandler = new Handler();
-            updateNavBarOption();
-        } else {
-            prefScreen.removePreference(mEnableNavigationBar);
-        }
 
         mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
         mSwapNavButtons = (SwitchPreference) findPreference(NAVIGATION_BAR_INVERSE);
