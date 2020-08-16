@@ -683,4 +683,11 @@
     <string name="pulse_filled_block_size">Blockgröße</string>
     <string name="pulse_empty_block_size">Blockabstände</string>
 
+    <!-- Audio Panel Theme -->
+    <string name="audio_panel_view_theme_title">UI-Stil für Lautstärke-Panel</string>
+    <string name="audio_panel_view_theme_summary">Wähle den UI-Stil des Lautstärke-Panels</string>
+    <string name="audio_panel_theme_default">AOSPA</string>
+    <string name="audio_panel_theme_aosp">Stock</string>
+    <string name="audio_panel_theme_custom">Rund</string>
+
 </resources>
