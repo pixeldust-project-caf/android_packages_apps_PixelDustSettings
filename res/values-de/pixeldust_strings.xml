@@ -358,6 +358,10 @@
     <string name="qs_show_brightness_minmax_summary">Schaltflächen (-/+) zur Helligkeitssteuerung in der Nähe des Schiebereglers anzeigen</string>
     <string name="qs_show_secure_title">Sicherheitsfußleiste</string>
     <string name="qs_show_secure_summary">Bedingte Sicherheitsfußzeile anzeigen</string>
+    <string name="qs_drag_handle_title">Anfasser</string>
+    <string name="qs_drag_handle_summary">Den Anfasser unter dem QS Panel anzeigen</string>
+    <string name="qs_persistent_settings_icon_title">Dauerhaftes Einstellungssymbol</string>
+    <string name="qs_persistent_settings_icon_summary">Das Einstellungssymbol immer im QS Panel anzeigen</string>
 
     <!-- Rounded corners -->
     <string name="corners_category_title">Abgerundete Ecken</string>
