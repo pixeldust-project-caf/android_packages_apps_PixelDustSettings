@@ -370,6 +370,10 @@
     <string name="qs_show_brightness_minmax_summary">Show + - brightness control buttons near the slider</string>
     <string name="qs_show_secure_title">Security footer</string>
     <string name="qs_show_secure_summary">Show security footer in the quick settings panel</string>
+    <string name="qs_drag_handle_title">Drag handle</string>
+    <string name="qs_drag_handle_summary">Show drag handle below the quick settings panel</string>
+    <string name="qs_persistent_settings_icon_title">Persistent settings icon</string>
+    <string name="qs_persistent_settings_icon_summary">Always show settings icon in the quick settings panel</string>
 
     <!-- Rounded corners -->
     <string name="corners_category_title">Rounded corners</string>
