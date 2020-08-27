@@ -81,7 +81,9 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
         mGestureBarSize.setOnPreferenceChangeListener(this);
 
         // Navigation bar related options
+        mHandler = new Handler();
         mEnableNavigationBar = (SwitchPreference) findPreference(ENABLE_NAV_BAR);
+        mEnableNavigationBar.setOnPreferenceChangeListener(this);
 
         mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
         mSwapNavButtons = (SwitchPreference) findPreference(NAVIGATION_BAR_INVERSE);
