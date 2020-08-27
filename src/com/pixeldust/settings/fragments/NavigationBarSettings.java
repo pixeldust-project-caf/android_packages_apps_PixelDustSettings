@@ -25,6 +25,7 @@ import android.os.ServiceManager;
 import android.os.Vibrator;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.widget.Toast;
 
 import androidx.preference.PreferenceCategory;
 import androidx.preference.ListPreference;
@@ -54,6 +55,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
     private static final String GESTURE_SYSTEM_NAVIGATION = "gesture_system_navigation";
     private static final String KEY_GESTURE_BAR_SIZE = "navigation_handle_width";
     private static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
+    private static final String NAVIGATION_BAR_IME_SPACE = "navigation_bar_ime_space";
 
     private SwitchPreference mEnableNavigationBar;
     private Preference mLayoutSettings;
@@ -62,9 +64,11 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
     private Preference mGestureSystemNavigation;
     private ListPreference mGestureBarSize;
     private SwitchPreference mPixelNavAnimation;
+    private SwitchPreference mNavigationBarIME;
 
     private boolean mIsNavSwitchingMode = false;
     private Handler mHandler;
+    private int gesturebarsize;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -74,7 +78,7 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         mGestureBarSize = (ListPreference) findPreference(KEY_GESTURE_BAR_SIZE);
-        int gesturebarsize = Settings.System.getIntForUser(getContentResolver(),
+        gesturebarsize = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.NAVIGATION_HANDLE_WIDTH, 2, UserHandle.USER_CURRENT);
         mGestureBarSize.setValue(String.valueOf(gesturebarsize));
         mGestureBarSize.setSummary(mGestureBarSize.getEntry());
@@ -84,6 +88,12 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
         mHandler = new Handler();
         mEnableNavigationBar = (SwitchPreference) findPreference(ENABLE_NAV_BAR);
         mEnableNavigationBar.setOnPreferenceChangeListener(this);
+        mNavigationBarIME = (SwitchPreference) findPreference(NAVIGATION_BAR_IME_SPACE);
+        mNavigationBarIME.setOnPreferenceChangeListener(this);
+
+        boolean isIMEchecked = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NAVIGATION_BAR_IME_SPACE, 1) != 0;
+        mNavigationBarIME.setChecked(isIMEchecked);
 
         mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
         mSwapNavButtons = (SwitchPreference) findPreference(NAVIGATION_BAR_INVERSE);
@@ -128,17 +138,33 @@ public class NavigationBarSettings extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mGestureBarSize) {
             int value = Integer.parseInt((String) newValue);
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.NAVIGATION_HANDLE_WIDTH, value,
-                    UserHandle.USER_CURRENT);
-            int index = mGestureBarSize.findIndexOfValue((String) newValue);
-            mGestureBarSize.setSummary(mGestureBarSize.getEntries()[index]);
-            SystemNavigationGestureSettings.setBackSensivityOverlay(true);
-            SystemNavigationGestureSettings.setCurrentSystemNavigationMode(getActivity(),
-                    getOverlayManager(), SystemNavigationGestureSettings.getCurrentSystemNavigationMode(getActivity()));
+            writeGestureBarSizeOption(value);
+            return true;
+        } else if (preference == mNavigationBarIME) {
+            boolean value = ((Boolean) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_IME_SPACE, value ? 1 : 0);
+            // trigger the ContentObserver to reload the current style of the gesture bar
+            if (gesturebarsize == 0) {
+                writeGestureBarSizeOption(gesturebarsize);
+            } else {
+                Toast.makeText(getContext(), R.string.navigation_bar_ime_space_hint,
+                        Toast.LENGTH_LONG).show();
+            }
             return true;
         }
         return false;
+    }
+
+    private void writeGestureBarSizeOption(int newValue) {
+        Settings.System.putIntForUser(getActivity().getContentResolver(),
+                Settings.System.NAVIGATION_HANDLE_WIDTH, newValue,
+                UserHandle.USER_CURRENT);
+        int index = mGestureBarSize.findIndexOfValue( String.valueOf(newValue));
+        mGestureBarSize.setSummary(mGestureBarSize.getEntries()[index]);
+        SystemNavigationGestureSettings.setBackSensivityOverlay(true);
+        SystemNavigationGestureSettings.setCurrentSystemNavigationMode(getActivity(),
+                getOverlayManager(), SystemNavigationGestureSettings.getCurrentSystemNavigationMode(getActivity()));
     }
 
     private void writeNavBarOption(boolean enabled) {

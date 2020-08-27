@@ -39,11 +39,13 @@
         android:entryValues="@array/gesture_navbar_handle_values"
         android:dependency="enable_nav_bar" />
 
-    <com.pixeldust.settings.preferences.SystemSettingSwitchPreference
+    <SwitchPreference
         android:key="navigation_bar_ime_space"
         android:title="@string/navigation_bar_ime_space_title"
         android:summary="@string/navigation_bar_ime_space_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true"
+        android:dependency="enable_nav_bar"
+        android:persistent="false" />
 
     <com.pixeldust.settings.preferences.SecureSettingListPreference
         android:key="navbar_layout_views"

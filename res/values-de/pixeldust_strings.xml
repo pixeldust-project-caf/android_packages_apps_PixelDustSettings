@@ -693,5 +693,6 @@
     <!-- IME button space -->
     <string name="navigation_bar_ime_space_title">IME-Tastenbereich</string>
     <string name="navigation_bar_ime_space_summary">IME-Tastenbereich unter der Tastatur anzeigen</string>
+    <string name="navigation_bar_ime_space_hint">Um die Änderung wirksam zu machen, wähle den Anzeigestil \'Verborgene Navigationsleiste\' aus.</string>
 
 </resources>
