@@ -37,4 +37,10 @@
         android:icon="@drawable/ic_buttons"
         android:title="@string/buttons_title" />
 
+     <com.pixeldust.support.preference.CardviewPreference
+        android:key="customisation"
+        android:fragment="com.pixeldust.settings.fragments.Customisation"
+        android:icon="@drawable/ic_customisation"
+        android:title="@string/customisation_title" />
+
 </PreferenceScreen>
