@@ -36,6 +36,7 @@
     <string name="search">Suchen</string>
     <string name="search_apps">Apps suchen</string>
     <string name="disabled">Deaktiviert</string>
+    <string name="none_string">Kein</string>
 
     <!-- PixelDustSettings categories -->
     <string name="fingerprint_category">Fingerabdruck</string>
@@ -490,4 +491,9 @@
     <string name="artwork_media_background_blur_radius_title">Unschärfegrad der Albumcovergrafik</string>
 <string name="artwork_media_background_fade_filter_title">Überblendungsgrad der Albumcovergrafik</string>
     <string name="artwork_media_background_alpha_title">Transparenz der Albumcovergrafik</string>
+
+    <!-- Lock screen album art filter -->
+    <string name="lockscreen_albumart_filter_title">Filter für Albumcover</string>
+    <string name="lockscreen_albumart_filter_grayscale">Graustufen</string>
+    <string name="lockscreen_albumart_filter_tint">Akzent getönt</string>
 </resources>
