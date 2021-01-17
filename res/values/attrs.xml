@@ -25,6 +25,7 @@
         <attr name="settings_title" format="string" />
         <attr name="settings_titleSize" format="dimension" />
         <attr name="settings_colorActive" format="color" />
+        <attr name="settings_titleColorActive" format="color" />
         <attr name="settings_colorInactive" format="color" />
         <attr name="settings_active" format="boolean" />
         <attr name="settings_duration" format="integer" />
