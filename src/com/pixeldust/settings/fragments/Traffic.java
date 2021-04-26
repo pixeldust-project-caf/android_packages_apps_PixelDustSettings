@@ -46,6 +46,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
 import com.pixeldust.support.preference.CustomSeekBarPreference;
+import com.pixeldust.support.preference.SystemSettingSeekBarPreference;
 import com.pixeldust.support.preference.SystemSettingSwitchPreference;
 
 import java.util.Locale;
@@ -57,10 +58,12 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
     private static final String DATA_ACTIVITY_ARROW  = "data_activity_arrow";
     private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
     private static final String NETWORK_TRAFFIC_LOCATION = "network_traffic_location";
+    private static final String NETWORK_TRAFFIC_REFRESH_INTERVAL = "network_traffic_refresh_interval";
 
     private SwitchPreference mShowCAFArrows;
     private CustomSeekBarPreference mThreshold;
     private ListPreference mNetTrafficLocation;
+    private SystemSettingSeekBarPreference mInterval;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,6 +91,12 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
         mThreshold = (CustomSeekBarPreference) findPreference("network_traffic_autohide_threshold");
         mThreshold.setValue(trafvalue);
         mThreshold.setOnPreferenceChangeListener(this);
+
+        int val = Settings.System.getIntForUser(resolver,
+                Settings.System.NETWORK_TRAFFIC_REFRESH_INTERVAL, 1, UserHandle.USER_CURRENT);
+        mInterval = (SystemSettingSeekBarPreference) findPreference(NETWORK_TRAFFIC_REFRESH_INTERVAL);
+        mInterval.setValue(val);
+        mInterval.setOnPreferenceChangeListener(this);
 
         int netMonitorEnabled = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_STATE, 0, UserHandle.USER_CURRENT);
@@ -143,6 +152,12 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, val,
                     UserHandle.USER_CURRENT);
             return true;
+        } else if (preference == mInterval) {
+            int val = (Integer) objValue;
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.NETWORK_TRAFFIC_REFRESH_INTERVAL, val,
+                    UserHandle.USER_CURRENT);
+            return true;
         }
         return false;
     }
@@ -151,10 +166,12 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
         switch(location){
             case 0:
                 mThreshold.setEnabled(false);
+                mInterval.setEnabled(false);
                 break;
             case 1:
             case 2:
                 mThreshold.setEnabled(true);
+                mInterval.setEnabled(true);
                 break;
             default:
                 break;
