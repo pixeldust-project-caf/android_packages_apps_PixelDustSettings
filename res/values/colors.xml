@@ -27,16 +27,4 @@
     <color name="bottom_inactive">#99000000</color>
     <color name="bottombar_ripple">#1f000000</color>
 
-    <!-- PixelDustSettings subcategories icon colors -->
-    <color name="settings_subcategory_1">#2196F3</color>
-    <color name="settings_subcategory_2">#72B70F</color>
-    <color name="settings_subcategory_3">#FF7E0F</color>
-    <color name="settings_subcategory_4">#258982</color>
-    <color name="settings_subcategory_5">#FFA727</color>
-    <color name="settings_subcategory_6">#01B1AF</color>
-    <color name="settings_subcategory_7">#C14CE6</color>
-    <color name="settings_subcategory_8">#0F9D58</color>
-    <color name="settings_subcategory_9">#F15B8D</color>
-    <color name="settings_subcategory_10">#5011C1</color>
-    <color name="settings_subcategory_11">#3DE725</color>
 </resources>
