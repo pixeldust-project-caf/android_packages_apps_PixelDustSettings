@@ -169,7 +169,6 @@ public class PixelDustSettings extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRetainInstance(true);
         getActivity().setTitle(R.string.settings_title);
         ContentResolver resolver = getActivity().getContentResolver();
         mCompositeDisposable = new CompositeDisposable();
