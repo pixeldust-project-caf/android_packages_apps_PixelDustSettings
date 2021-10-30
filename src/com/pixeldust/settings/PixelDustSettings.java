@@ -60,8 +60,6 @@ import com.pixeldust.settings.categories.System;
 import com.pixeldust.settings.navigation.BubbleNavigationConstraintView;
 import com.pixeldust.settings.navigation.BubbleNavigationChangeListener;
 
-import github.com.st235.lib_expandablebottombar.ExpandableBottomBar;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
