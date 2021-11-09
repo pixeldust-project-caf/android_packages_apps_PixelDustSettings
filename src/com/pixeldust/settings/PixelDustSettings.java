@@ -60,20 +60,11 @@ import com.pixeldust.settings.categories.System;
 import com.pixeldust.settings.navigation.BubbleNavigationConstraintView;
 import com.pixeldust.settings.navigation.BubbleNavigationChangeListener;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.schedulers.Schedulers;
-
-import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
-
 public class PixelDustSettings extends SettingsPreferenceFragment implements   
        Preference.OnPreferenceChangeListener {
 
     private static final int MENU_HELP  = 0;
     private SharedPreferences pref;
-    private CompositeDisposable mCompositeDisposable;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -171,7 +162,6 @@ public class PixelDustSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         getActivity().setTitle(R.string.settings_title);
         ContentResolver resolver = getActivity().getContentResolver();
-        mCompositeDisposable = new CompositeDisposable();
     }
 
     @Override
@@ -182,7 +172,6 @@ public class PixelDustSettings extends SettingsPreferenceFragment implements
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mCompositeDisposable.clear();
     }
 
     @Override
