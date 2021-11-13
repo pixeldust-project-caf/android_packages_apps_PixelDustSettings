@@ -76,7 +76,7 @@
     <string name="pixeldust_changelog_error">Unable to load changelog</string>
 
     <!-- Misc Extensions -->
-    <string name="misc_extensions_title">Misc Extensions</string>
+    <string name="misc_extensions_title">Miscellaneous</string>
 
     <!-- Lockscreen UI -->
     <string name="lockscreen_ui_title">Lockscreen UI</string>
