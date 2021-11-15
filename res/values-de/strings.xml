@@ -417,4 +417,9 @@
     <!-- Black theme -->
     <string name="system_black_theme_title">Schwarzes Hintergrund-Design</string>
     <string name="system_black_theme_summary">Schwarzen Hintergrund erzwingen</string>
+
+    <!-- Location privacy indicator -->
+    <string name="location_privacy_indicator_title">Indikator für Standortzugriff</string>
+    <string name="location_privacy_indicator_summary_on">Standortzugriff im Datenschutzchip anzeigen</string>
+    <string name="location_privacy_indicator_summary_off">Standortzugriff als Symbol in der Statusleiste anzeigen</string>
 </resources>

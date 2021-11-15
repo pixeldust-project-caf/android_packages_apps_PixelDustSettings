@@ -16,37 +16,39 @@
 
 package com.pixeldust.settings.fragments;
 
-import android.app.ActivityManagerNative;
 import android.content.Context;
 import android.content.ContentResolver;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.os.RemoteException;
-import android.os.ServiceManager;
+import android.provider.DeviceConfig;
+import android.provider.Settings;
+import android.util.Log;
+
 import androidx.preference.Preference;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
-import android.util.Log;
-import android.view.WindowManagerGlobal;
-import android.view.IWindowManager;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import java.util.Locale;
-import android.text.TextUtils;
-import android.view.View;
-
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
 
+import com.pixeldust.support.preference.SecureSettingSwitchPreference;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Locale;
+
 public class MiscExtensions extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private static final String LOCATION_DEVICE_CONFIG = "location_indicators_enabled";
+    private static final String LOCATION_INDICATOR = "enable_location_privacy_indicator";
+
+    private SecureSettingSwitchPreference mLocationIndicator;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,13 @@ public class MiscExtensions extends SettingsPreferenceFragment implements OnPref
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
 
+        mLocationIndicator = (SecureSettingSwitchPreference) findPreference(LOCATION_INDICATOR);
+        boolean locIndicator = DeviceConfig.getBoolean(DeviceConfig.NAMESPACE_PRIVACY,
+                LOCATION_DEVICE_CONFIG, false);
+        mLocationIndicator.setDefaultValue(locIndicator);
+        mLocationIndicator.setChecked(Settings.Secure.getInt(resolver,
+                LOCATION_INDICATOR, locIndicator ? 1 : 0) == 1);
+        mLocationIndicator.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -71,6 +80,14 @@ public class MiscExtensions extends SettingsPreferenceFragment implements OnPref
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mLocationIndicator) {
+            int val = ((Boolean) objValue) ? 1 : 0;
+            Settings.Secure.putInt(resolver,
+                    LOCATION_INDICATOR, val);
+            PixeldustUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        }
         return false;
     }
 }
