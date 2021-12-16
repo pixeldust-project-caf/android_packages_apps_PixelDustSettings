@@ -448,4 +448,12 @@
     <string name="volte_icon_summary">VoLTE-Symbol anzeigen</string>
     <string name="volte_icon_style_title">VoLTE-Symbol auswählen</string>
     <string name="volte_icon_vo">Nur Vo</string>
+
+    <!-- VoWiFi icon -->
+    <string name="vowifi_icon_title">VoWiFi-Symbol</string>
+    <string name="vowifi_icon_enabled">VoWiFi-Symbol anzeigen</string>
+    <string name="vowifi_icon_disabled">VoWiFi-Symbol nicht anzeigen</string>
+    <string name="vowifi_icon_enabled_volte_disabled">VoWiFi statt VoLTE anzeigen</string>
+    <string name="vowifi_icon_style_title">VoWiFi-Symbol auswählen</string>
+    <string name="vowifi_icon_default">Standard</string>
 </resources>
