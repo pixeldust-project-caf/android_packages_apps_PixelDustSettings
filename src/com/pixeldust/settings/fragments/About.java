@@ -16,37 +16,40 @@
 
 package com.pixeldust.settings.fragments;
 
-import android.app.ActivityManagerNative;
+import android.app.Activity;
 import android.content.Context;
-import android.content.ContentResolver;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.res.Resources;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.UserHandle;
-import android.os.RemoteException;
-import android.os.ServiceManager;
 import androidx.preference.Preference;
-import androidx.preference.ListPreference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
-import android.util.Log;
-import android.view.WindowManagerGlobal;
-import android.view.IWindowManager;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import java.util.Locale;
-import android.text.TextUtils;
-import android.view.View;
-
-import com.android.settings.R;
+import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
+import com.android.settings.R;
 
-public class About extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+import java.util.List;
+import java.util.ArrayList;
+
+@SearchIndexable
+public class About extends SettingsPreferenceFragment {
+
+    public static final String TAG = "About";
+
+    private String KEY_PIXELDUST_DONATE = "pixeldust_donate";
+    private String KEY_PIXELDUST_SOURCE = "pixeldust_source";
+    private String KEY_PIXELDUST_TELEGRAM = "pixeldust_telegram";
+    private String KEY_PIXELDUST_TELEGRAM_CHANNEL = "pixeldust_telegram_channel";
+    private String KEY_PIXELDUST_WEBSITE = "pixeldust_website";
+
+    private Preference mDonate;
+    private Preference mSourceUrl;
+    private Preference mTelegramUrl;
+    private Preference mTelegramChannelUrl;
+    private Preference mWebsite;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,23 +57,44 @@ public class About extends SettingsPreferenceFragment implements OnPreferenceCha
 
         addPreferencesFromResource(R.xml.about);
 
-        final ContentResolver resolver = getActivity().getContentResolver();
-        final PreferenceScreen prefSet = getPreferenceScreen();
+        mDonate = findPreference(KEY_PIXELDUST_DONATE);
+        mSourceUrl = findPreference(KEY_PIXELDUST_SOURCE);
+        mTelegramUrl = findPreference(KEY_PIXELDUST_TELEGRAM);
+        mTelegramChannelUrl = findPreference(KEY_PIXELDUST_TELEGRAM_CHANNEL);
+        mWebsite = findPreference(KEY_PIXELDUST_WEBSITE);
+    }
 
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mDonate) {
+            launchUrl("https://www.paypal.me/spezi77");
+        } else if (preference == mSourceUrl) {
+            launchUrl("https://github.com/pixeldust-project-caf");
+        } else if (preference == mTelegramUrl) {
+            launchUrl("https://t.me/pixeldustcommunity");
+        } else if (preference == mTelegramChannelUrl) {
+            launchUrl("https://t.me/pixeldustproject");
+        } else if (preference == mWebsite) {
+            launchUrl("https://sourceforge.net/projects/pixeldustproject/files/ota/");
+        }
+        return super.onPreferenceTreeClick(preference);
+    }
+
+    private void launchUrl(String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uriUrl);
+        getActivity().startActivity(intent);
     }
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.PIXELDUST;
+        return MetricsProto.MetricsEvent.PIXELDUST;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
+    /**
+     * For search
+     */
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.about);
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
-        return false;
-    }
 }

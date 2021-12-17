@@ -53,6 +53,16 @@
 
     <!-- About -->
     <string name="about_title">About PixelDust</string>
+    <string name="pixeldust_website_title">Download site</string>
+    <string name="pixeldust_website_summary">Visit our official source forge website</string>
+    <string name="donate_pixeldust_title">Support us</string>
+    <string name="donate_pixeldust_summary">Donate to support further development</string>
+    <string name="pixeldust_source_title">GitHub</string>
+    <string name="pixeldust_source_summary">We love open source, check us out</string>
+    <string name="pixeldust_telegram_title">Discussions group</string>
+    <string name="pixeldust_telegram_summary">We are on telegram. Join us!</string>
+    <string name="pixeldust_telegram_channel_title">News channel</string>
+    <string name="pixeldust_telegram_channel_summary">Get notified of new builds on Telegram</string>
 
     <!-- Misc Extensions -->
     <string name="misc_extensions_title">Miscellaneous</string>

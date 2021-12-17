@@ -22,7 +22,7 @@
     <com.pixeldust.support.preference.CardviewPreference
         android:key="about"
         android:fragment="com.pixeldust.settings.fragments.About"
-        android:icon="@drawable/ic_about"
+        android:icon="@drawable/ic_settings_pixeldust"
         android:title="@string/about_title" />
 
     <com.pixeldust.support.preference.CardviewPreference

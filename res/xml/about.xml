@@ -20,4 +20,39 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/about_title">
 
+    <!-- PixelDust Downloads -->
+    <Preference
+        android:key="pixeldust_website"
+        android:icon="@drawable/ic_web"
+        android:title="@string/pixeldust_website_title"
+        android:summary="@string/pixeldust_website_summary" />
+
+    <!-- PixelDust Donate -->
+    <Preference
+        android:key="pixeldust_donate"
+        android:icon="@drawable/ic_donate"
+        android:title="@string/donate_pixeldust_title"
+        android:summary="@string/donate_pixeldust_summary" />
+
+    <!-- PixelDust Source -->
+    <Preference
+        android:key="pixeldust_source"
+        android:icon="@drawable/ic_source"
+        android:title="@string/pixeldust_source_title"
+        android:summary="@string/pixeldust_source_summary" />
+
+    <!-- PixelDust Telegram -->
+    <Preference
+        android:key="pixeldust_telegram"
+        android:icon="@drawable/ic_telegram"
+        android:title="@string/pixeldust_telegram_title"
+        android:summary="@string/pixeldust_telegram_summary" />
+
+    <!-- PixelDust Telegram Updates Channel -->
+    <Preference
+        android:key="pixeldust_telegram_channel"
+        android:icon="@drawable/ic_telegram_channel"
+        android:title="@string/pixeldust_telegram_channel_title"
+        android:summary="@string/pixeldust_telegram_channel_summary" />
+
 </PreferenceScreen>
