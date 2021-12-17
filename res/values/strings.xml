@@ -63,6 +63,9 @@
     <string name="pixeldust_telegram_summary">We are on telegram. Join us!</string>
     <string name="pixeldust_telegram_channel_title">News channel</string>
     <string name="pixeldust_telegram_channel_summary">Get notified of new builds on Telegram</string>
+    <string name="pixeldust_changelog_title">Current changelog</string>
+    <string name="pixeldust_changelog_summary">View changes in the ROM installed</string>
+    <string name="pixeldust_changelog_error">Unable to load changelog</string>
 
     <!-- Misc Extensions -->
     <string name="misc_extensions_title">Miscellaneous</string>

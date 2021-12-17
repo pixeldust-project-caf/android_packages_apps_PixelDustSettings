@@ -20,6 +20,17 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/about_title">
 
+    <!-- PixelDust Changelog -->
+    <Preference
+        android:key="pixeldust_changelog"
+        android:icon="@drawable/ic_changelog"
+        android:title="@string/pixeldust_changelog_title"
+        android:summary="@string/pixeldust_changelog_summary">
+        <intent android:action="android.intent.action.MAIN"
+             android:targetPackage="com.android.settings"
+             android:targetClass="com.pixeldust.settings.fragments.ChangelogActivity"/>
+    </Preference>
+
     <!-- PixelDust Downloads -->
     <Preference
         android:key="pixeldust_website"
