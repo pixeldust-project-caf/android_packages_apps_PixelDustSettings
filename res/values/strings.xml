@@ -51,6 +51,9 @@
     <string name="general_tweaks_title">General Tweaks</string>
     <string name="general_category">General</string>
 
+    <!-- About -->
+    <string name="about_title">About PixelDust</string>
+
     <!-- Misc Extensions -->
     <string name="misc_extensions_title">Miscellaneous</string>
 

@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <com.pixeldust.support.preference.CardviewPreference
+        android:key="about"
+        android:fragment="com.pixeldust.settings.fragments.About"
+        android:icon="@drawable/ic_about"
+        android:title="@string/about_title" />
+
+    <com.pixeldust.support.preference.CardviewPreference
         android:key="general_tweaks"
         android:fragment="com.pixeldust.settings.fragments.GeneralTweaks"
         android:icon="@drawable/ic_general_tweaks"
