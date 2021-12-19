@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2021 The PixelDust Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/crew_title">
+
+    <PreferenceCategory
+        android:key="crew_category" />
+
+        <Preference
+            android:key="0"
+            android:icon="@drawable/ic_source" />
+
+        <Preference
+            android:key="1"
+            android:icon="@drawable/ic_source" />
+
+        <Preference
+            android:key="2"
+            android:icon="@drawable/ic_source" />
+
+        <Preference
+            android:key="3"
+            android:icon="@drawable/ic_source" />
+
+        <Preference
+            android:key="4"
+            android:icon="@drawable/ic_source" />
+
+        <Preference
+            android:key="5"
+            android:icon="@drawable/ic_source" />
+
+        <Preference
+            android:key="6"
+            android:icon="@drawable/ic_source" />
+
+        <Preference
+            android:key="7"
+            android:icon="@drawable/ic_source" />
+
+    <PreferenceCategory
+        android:key="join_crew_category" />
+
+        <Preference
+            android:key="join_crew"
+            android:icon="@drawable/ic_source"
+            android:title="@string/join_crew_title"
+            android:summary="@string/join_crew_summary" />
+
+</PreferenceScreen>

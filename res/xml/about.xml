@@ -38,6 +38,14 @@
         android:title="@string/pixeldust_website_title"
         android:summary="@string/pixeldust_website_summary" />
 
+    <!-- PixelDust Crew -->
+    <Preference
+        android:key="pixeldust_crew"
+        android:icon="@drawable/ic_crew"
+        android:title="@string/pixeldust_crew_title"
+        android:summary="@string/pixeldust_crew_summary"
+        android:fragment="com.pixeldust.settings.fragments.Crew" />
+
     <!-- PixelDust Donate -->
     <Preference
         android:key="pixeldust_donate"

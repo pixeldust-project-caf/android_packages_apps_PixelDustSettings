@@ -55,6 +55,11 @@
     <string name="about_title">About PixelDust</string>
     <string name="pixeldust_website_title">Download site</string>
     <string name="pixeldust_website_summary">Visit our official source forge website</string>
+    <string name="crew_title">PixelDust crew</string>
+    <string name="pixeldust_crew_title">Our crew</string>
+    <string name="pixeldust_crew_summary">Find out who we are</string>
+    <string name="join_crew_title">Would you like to join?</string>
+    <string name="join_crew_summary">Find out how to apply to us</string>
     <string name="donate_pixeldust_title">Support us</string>
     <string name="donate_pixeldust_summary">Donate to support further development</string>
     <string name="pixeldust_source_title">GitHub</string>

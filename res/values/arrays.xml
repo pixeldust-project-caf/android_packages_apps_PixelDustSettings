@@ -14,5 +14,48 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation,MissingTranslation">
+    <string-array name="crew_avatars" formatted="false" tools:ignore="TypographyDashes">
+        <item>https://avatars.githubusercontent.com/u/35808625?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/6023176?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/40058171?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/10505082?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/10797987?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/64266679?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/50539474?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/80977693?s=96</item>
+    </string-array>
+
+    <string-array name="crew_titles">
+        <item>Roger</item>
+        <item>Matthias</item>
+        <item>Sonal</item>
+        <item>Felix</item>
+        <item>Nitin</item>
+        <item>Reharsh</item>
+        <item>Reza</item>
+        <item>Manavjit Singh</item>
+    </string-array>
+
+    <string-array name="crew_descriptions">
+        <item>Art director</item>
+        <item>Founder / lead developer</item>
+        <item>Developer</item>
+        <item>Developer</item>
+        <item>Developer</item>
+        <item>Developer</item>
+        <item>Developer</item>
+        <item>Developer</item>
+    </string-array>
+
+    <string-array name="crew_links">
+        <item>https://twitter.com/rogertruttmann</item>
+        <item>https://github.com/spezi77</item>
+        <item>https://github.com/SonalSingh18</item>
+        <item>https://github.com/fKm86</item>
+        <item>https://github.com/nitin1438</item>
+        <item>https://github.com/reharsh67</item>
+        <item>https://github.com/GrettoRosella</item>
+        <item>https://github.com/Kuruin</item> 
+    </string-array>
 </resources>
