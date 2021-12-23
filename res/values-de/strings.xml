@@ -445,15 +445,9 @@
 
     <!-- Show VoLTE icon on statusbar -->
     <string name="volte_icon_title">VoLTE-Symbol</string>
-    <string name="volte_icon_summary">VoLTE-Symbol anzeigen</string>
-    <string name="volte_icon_style_title">VoLTE-Symbol auswählen</string>
-    <string name="volte_icon_vo">Nur Vo</string>
+    <string name="volte_icon_summary">VoLTE-Symbol anzeigen falls verfügbar</string>
 
     <!-- VoWiFi icon -->
     <string name="vowifi_icon_title">VoWiFi-Symbol</string>
-    <string name="vowifi_icon_enabled">VoWiFi-Symbol anzeigen</string>
-    <string name="vowifi_icon_disabled">VoWiFi-Symbol nicht anzeigen</string>
-    <string name="vowifi_icon_enabled_volte_disabled">VoWiFi statt VoLTE anzeigen</string>
-    <string name="vowifi_icon_style_title">VoWiFi-Symbol auswählen</string>
-    <string name="vowifi_icon_default">Standard</string>
+    <string name="vowifi_icon_summary">VoWiFi-Symbol anzeigen falls verfügbar</string>
 </resources>
