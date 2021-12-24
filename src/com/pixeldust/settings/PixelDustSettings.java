@@ -85,8 +85,10 @@ public class PixelDustSettings extends SettingsPreferenceFragment implements
                     viewPager.setCurrentItem(position, true);
                 } else if (view.getId() == R.id.notifications_panel_category) {
                     viewPager.setCurrentItem(position, true);
+/*
                 } else if (view.getId() == R.id.navigation_and_recents_category) {
                     viewPager.setCurrentItem(position, true);
+*/
                 } else if (view.getId() == R.id.lockscreen_category) {
                     viewPager.setCurrentItem(position, true);
                 } else if (view.getId() == R.id.system_category) {
@@ -124,9 +126,9 @@ public class PixelDustSettings extends SettingsPreferenceFragment implements
             super(fm);
             frags[0] = new StatusBar();
             frags[1] = new NotificationsPanel();
-            frags[2] = new NavigationAndRecents();
-            frags[3] = new Lockscreen();
-            frags[4] = new System();
+            //frags[2] = new NavigationAndRecents();
+            frags[2] = new Lockscreen();
+            frags[3] = new System();
         }
 
         @Override
@@ -150,7 +152,7 @@ public class PixelDustSettings extends SettingsPreferenceFragment implements
         titleString = new String[]{
             getString(R.string.status_bar_category),
             getString(R.string.notifications_panel_category),
-            getString(R.string.navigation_and_recents_category),
+            //getString(R.string.navigation_and_recents_category),
             getString(R.string.lockscreen_category),
             getString(R.string.system_category)};
 
