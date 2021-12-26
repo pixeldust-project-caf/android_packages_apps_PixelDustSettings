@@ -20,14 +20,14 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/general_tweaks_title">
 
-    <PreferenceCategory
+    <!--PreferenceCategory
         android:key="general_tweaks_general_category"
         android:title="@string/general_category">
-    </PreferenceCategory>
+    </PreferenceCategory-->
 
-        <PreferenceCategory
-            android:key="gestures_category"
-            android:title="@string/gestures_category" >
+    <PreferenceCategory
+        android:key="gestures_category"
+        android:title="@string/gestures_category" >
 
         <com.pixeldust.support.preference.SystemSettingSwitchPreference
             android:key="three_finger_gesture"
