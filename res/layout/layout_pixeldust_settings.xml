@@ -57,7 +57,6 @@
             app:settings_shape="@drawable/navigation_transition_background_drawable_notifications_panel"
             app:settings_title="@string/notifications_panel_category" />
 
-<!--
         <com.pixeldust.settings.navigation.BubbleToggleView
             android:id="@+id/navigation_and_recents_category"
             android:layout_width="wrap_content"
@@ -68,7 +67,6 @@
             app:settings_icon="@drawable/ic_navigation_and_recents_category"
             app:settings_shape="@drawable/navigation_transition_background_drawable_navigation"
             app:settings_title="@string/navigation_and_recents_category" />
--->
 
         <com.pixeldust.settings.navigation.BubbleToggleView
             android:id="@+id/lockscreen_category"
