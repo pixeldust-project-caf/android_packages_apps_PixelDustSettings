@@ -16,11 +16,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-     <com.pixeldust.support.preference.SystemSettingSwitchPreference
+     <SwitchPreference
         android:key="data_activity_arrow"
         android:title="@string/data_activity_arrow_title"
         android:summary="@string/data_activity_arrow_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true"
+        android:persistent="false" />
 
      <ListPreference
         android:key="network_traffic_view_location"

@@ -22,25 +22,28 @@ import android.content.ContentResolver;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.UserHandle;
+import android.provider.Settings;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.IWindowManager;
+import android.view.View;
+import android.view.WindowManagerGlobal;
+
 import androidx.preference.Preference;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import android.provider.Settings;
-import android.util.Log;
-import android.view.WindowManagerGlobal;
-import android.view.IWindowManager;
+import androidx.preference.SwitchPreference;
+
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import java.util.Locale;
-import android.text.TextUtils;
-import android.view.View;
-
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
@@ -56,12 +59,14 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
     private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD  = "network_traffic_autohide_threshold";
     private static final String NETWORK_TRAFFIC_ARROW  = "network_traffic_arrow";
     private static final String NETWORK_TRAFFIC_FONT_SIZE  = "network_traffic_font_size";
+    private static final String DATA_ACTIVITY_ARROW  = "data_activity_arrow";
 
     private ListPreference mNetTrafficLocation;
     private ListPreference mNetTrafficType;
     private CustomSeekBarPreference mNetTrafficSize;
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mShowArrows;
+    private SwitchPreference mShowCAFArrows;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -107,6 +112,12 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
             updateTrafficLocation(0); 
         }
         mNetTrafficLocation.setSummary(mNetTrafficLocation.getEntry());
+
+        int cafValue = Settings.System.getInt(resolver,
+                Settings.System.DATA_ACTIVITY_ARROW, 1);
+        mShowCAFArrows = (SwitchPreference) findPreference(DATA_ACTIVITY_ARROW);
+        mShowCAFArrows.setChecked(cafValue != 0);
+        mShowCAFArrows.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -152,6 +163,12 @@ public class Traffic extends SettingsPreferenceFragment implements OnPreferenceC
             int width = ((Integer)objValue).intValue();
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_FONT_SIZE, width);
+            return true;
+        }  else if (preference == mShowCAFArrows) {
+            int val = ((Boolean) objValue) ? 1 : 0;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DATA_ACTIVITY_ARROW, val);
+            PixeldustUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         return false;
