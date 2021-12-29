@@ -46,7 +46,6 @@ public class System extends SettingsPreferenceFragment implements
 
     }
 
-
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.PIXELDUST;
