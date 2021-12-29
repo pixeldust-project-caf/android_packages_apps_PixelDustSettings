@@ -62,6 +62,8 @@ import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settingslib.Utils;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
