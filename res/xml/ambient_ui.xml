@@ -40,4 +40,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="ambient_pulse_category"
+        android:title="@string/ambient_pulse_title">
+
+        <com.pixeldust.support.preference.SecureSettingSwitchPreference
+            android:key="ambient_wake_gestures"
+            android:title="@string/ambient_wake_gestures_title"
+            android:summary="@string/ambient_wake_gestures_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
