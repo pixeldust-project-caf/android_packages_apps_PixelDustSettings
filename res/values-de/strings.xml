@@ -413,4 +413,8 @@
     <!-- Fingerprint Ripple Effect -->
     <string name="enable_fingerprint_ripple_effect_title">Welleneffekt beim Entsperren</string>
     <string name="enable_fingerprint_ripple_effect_summary">Welleneffekt beim Entsperren per Fingerabdruck anzeigen</string>
+
+    <!-- Black theme -->
+    <string name="system_black_theme_title">Schwarzes Hintergrund-Design</string>
+    <string name="system_black_theme_summary">Schwarzen Hintergrund erzwingen</string>
 </resources>
