@@ -75,7 +75,7 @@ public class About extends SettingsPreferenceFragment {
         } else if (preference == mTelegramChannelUrl) {
             launchUrl("https://t.me/pixeldustproject");
         } else if (preference == mWebsite) {
-            launchUrl("https://sourceforge.net/projects/pixeldustproject/files/ota/");
+            launchUrl("https://pixeldust-project.com");
         }
         return super.onPreferenceTreeClick(preference);
     }

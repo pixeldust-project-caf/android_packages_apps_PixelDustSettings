@@ -56,8 +56,8 @@
 
     <!-- About -->
     <string name="about_title">About PixelDust</string>
-    <string name="pixeldust_website_title">Download site</string>
-    <string name="pixeldust_website_summary">Visit our official source forge website</string>
+    <string name="pixeldust_website_title">Website</string>
+    <string name="pixeldust_website_summary">Visit our official website</string>
     <string name="crew_title">PixelDust crew</string>
     <string name="pixeldust_crew_title">Our crew</string>
     <string name="pixeldust_crew_summary">Find out who we are</string>
