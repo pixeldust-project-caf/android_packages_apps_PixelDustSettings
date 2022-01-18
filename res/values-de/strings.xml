@@ -380,6 +380,10 @@
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the system wide icon pack. -->
     <string name="theme_customization_icon_pack_title">Icon-Pack</string>
     <string name="theme_customization_icon_pack_summary">Icon-Pack festlegen</string>
+    <string name="theme_customization_signal_icon_title">Signalsymbol</string>
+    <string name="theme_customization_signal_icon_summary">Stil für das Signalsymbol festlegen</string>
+    <string name="theme_customization_wifi_icon_title">WiFi-Symbol</string>
+    <string name="theme_customization_wifi_icon_summary">Stil für das WiFi-Symbol festlegen</string>
 
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Label for the option that turns off customizations for a given category.-->
     <string name="theme_customization_device_default">Gemäß Standard fürs Gerät</string>
