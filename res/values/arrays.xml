@@ -24,6 +24,7 @@
         <item>https://avatars.githubusercontent.com/u/64266679?s=96</item>
         <item>https://avatars.githubusercontent.com/u/50539474?s=96</item>
         <item>https://avatars.githubusercontent.com/u/80977693?s=96</item>
+        <item>https://avatars.githubusercontent.com/u/62266035?s=96</item>
     </string-array>
 
     <string-array name="crew_titles">
@@ -35,6 +36,7 @@
         <item>Reharsh</item>
         <item>Reza</item>
         <item>Manavjit Singh</item>
+        <item>Kyle</item>
     </string-array>
 
     <string-array name="crew_descriptions">
@@ -46,6 +48,7 @@
         <item>Developer</item>
         <item>Developer</item>
         <item>Developer</item>
+        <item>System admin</item>
     </string-array>
 
     <string-array name="crew_links">
@@ -57,6 +60,7 @@
         <item>https://github.com/reharsh67</item>
         <item>https://github.com/GrettoRosella</item>
         <item>https://github.com/Kuruin</item> 
+        <item>https://github.com/MonkeySaint</item> 
     </string-array>
 
     <!-- Torch Power button gestures -->
