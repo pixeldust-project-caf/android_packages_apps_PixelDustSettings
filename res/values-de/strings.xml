@@ -84,6 +84,9 @@
     <!-- Lockscreen icons -->
     <string name="lockscreen_shortcuts">Verknüpfungen</string>
 
+    <!-- Lockscreen general -->
+    <string name="lockscreen_general_title">Allgemeines</string>
+
     <!-- Navigation -->
     <string name="navigationbar_settings_title">Navigationsleiste</string>
 

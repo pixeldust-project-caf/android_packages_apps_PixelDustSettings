@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <com.pixeldust.support.preference.CardviewPreference
+         android:key="lockscreen_general"
+         android:fragment="com.pixeldust.settings.fragments.LockscreenGeneral"
+         android:icon="@drawable/ic_general_tweaks"
+         android:title="@string/lockscreen_general_title" />
+
+    <com.pixeldust.support.preference.CardviewPreference
          android:key="lockscreen_ui"
          android:fragment="com.pixeldust.settings.fragments.LockscreenUI"
          android:icon="@drawable/ic_lockscreen_ui"
@@ -34,7 +40,7 @@
             android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </com.pixeldust.support.preference.CardviewPreference>
 
-     <com.pixeldust.support.preference.CardviewPreference
+    <com.pixeldust.support.preference.CardviewPreference
         android:key="ambient_ui"
         android:fragment="com.pixeldust.settings.fragments.AmbientUI"
         android:icon="@drawable/ic_aod"
