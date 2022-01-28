@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2022 The PixelDust Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- General app strings -->
+    <string name="settings_title">PixelDust Einstellungen</string>
+    <string name="add">Hinzufügen</string>
+    <string name="advanced">Erweitert</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="default_text">Standard</string>
+    <string name="dlg_ok">OK</string>
+    <string name="attention">Achtung</string>
+    <string name="loading">Lade\u2026</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="reset_colors">Farben zurücksetzen</string>
+    <string name="reset_android">Android</string>
+    <string name="text_title">Text</string>
+    <string name="icon_title">Symbol</string>
+    <string name="color_title">Farbe</string>
+    <string name="colors_title">Farben</string>
+
+    <!-- PixelDustSettings categories -->
+    <string name="fingerprint_category">Fingerabdruck</string>
+    <string name="gestures_category">Gesten</string>
+    <string name="icons_category">Symmbole</string>
+    <string name="status_bar_category">Statusleiste</string>
+    <string name="notifications_panel_category">Schnelleinstellungen</string>
+    <string name="system_category">System</string>
+    <string name="lockscreen_category">Sperrbildschirm</string>
+    <string name="navigation_and_recents_category">Navigation</string>
+    <string name="build_tweaks_summary_title">Bring dein Gerät in Form!</string>
+    <string name="listview">Listenansicht</string>
+
+    <!-- Frags -->
+    <!-- Buttons -->
+    <string name="buttons_title">Tasten</string>
+
+    <!-- General Tweaks -->
+    <string name="general_tweaks_title">Allgemeine Anpassungen</string>
+    <string name="general_category">Allgemein</string>
+
+    <!-- About -->
+    <string name="about_title">Über PixelDust</string>
+    <string name="pixeldust_website_title">Website</string>
+    <string name="pixeldust_website_summary">Schau auf unserer offiziellen Website vorbei</string>
+    <string name="crew_title">PixelDust Team</string>
+    <string name="pixeldust_crew_title">Unsere Mannschaft</string>
+    <string name="pixeldust_crew_summary">Finde heraus, wer wir sind</string>
+    <string name="join_crew_title">Magst du auch mitmachen?</string>
+    <string name="join_crew_summary">Mach dich schlau, wie Du dich bei uns bewerben kannst</string>
+    <string name="donate_pixeldust_title">Unterstütze uns</string>
+    <string name="donate_pixeldust_summary">Spende was, um die Weiterentwicklung zu unterstützen</string>
+    <string name="pixeldust_source_title">GitHub</string>
+    <string name="pixeldust_source_summary">Wir lieben Open Source, schau gerne rein!</string>
+    <string name="pixeldust_telegram_title">Diskussionsgruppe</string>
+    <string name="pixeldust_telegram_summary">Wir sind auf Telegram. Sei auch dabei!</string>
+    <string name="pixeldust_telegram_channel_title">News Kanal</string>
+    <string name="pixeldust_telegram_channel_summary">Informiere dich über neue Builds auf Telegram</string>
+    <string name="pixeldust_changelog_title">Aktuelles Changelog</string>
+    <string name="pixeldust_changelog_summary">Lass dir alle Änderungen der gerade installierten ROM anzeigen</string>
+    <string name="pixeldust_changelog_error">Changelog kann nicht geladen werden</string>
+
+    <!-- Misc Extensions -->
+    <string name="misc_extensions_title">Verschiedenes</string>
+
+    <!-- Lockscreen UI -->
+    <string name="lockscreen_ui_title">UI-Anpassungen</string>
+
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_shortcuts">Verknüpfungen</string>
+
+    <!-- Navigation -->
+    <string name="navigationbar_settings_title">Navigationsleiste</string>
+
+    <!-- Statusbar Items -->
+    <string name="statusbar_items_category">Statusleisten-Symbole</string>
+
+    <!-- Quick Settings -->
+    <string name="quick_settings_title">Schnelleinstellungen</string>
+
+    <!-- Customisation -->
+    <string name="customisation_title">UI-Anpassungen</string>
+
+    <!-- App info dialog -->
+    <string name="settings_dialog_title">Hilf uns, dir zu helfen!</string>
+    <string name="settings_dialog_message">Wenn Du einen Fehler mit einer dieser Einstellungen findest, melde ihn in unserer Telegram-Gruppe. Du MUSST bei einem Fehlerbericht Folgendes angeben:\n\n1. Ein logcat oder last_kmsg\n2. Kernel und verwendete Mods\n3. Nützliche Informationen\n\nWenn Du etwas nicht angemessen meldest, erwarte auch NICHT, dass Probleme gelöst werden.</string>
+    <string name="settings_dialog_toast">LIES DAS GANZE DURCH!</string>
+    <string name="artwork_media_fade_level_summary">Ausblenden der Mediengrafik</string>
+
+    <!-- Monet Engine -->
+    <string name="monet_category">Monet</string>
+    <string name="monet_engine_title">Monet Theme-Engine</string>
+    <string name="monet_engine_summary">Monet-Parameter einstellen</string>
+    <string name="monet_engine_custom_color_title">Benutzerdefinierte Farbe verwenden</string>
+    <string name="monet_engine_custom_color_summary">Benutzerdefinierte Farbe für die Monet-Engine anstelle der Hintergrundfarben verwenden</string>
+    <string name="monet_engine_color_override_title">Benutzerdefinierte Farbe</string>
+    <string name="monet_engine_white_luminance_user_title">Weiße Leuchtdichte</string>
+    <string name="monet_engine_accurate_shades_title">Genaue Schattierungen verwenden</string>
+    <string name="monet_engine_chroma_factor_title">Chroma-Faktor</string>
+    <string name="monet_engine_linear_lightness_title">Lineare Helligkeit verwenden</string>
+
+    <!-- Power Menu -->
+    <string name="power_menu_title">Power-Menü</string>
+    <string name="power_menu_title_summary">Optionen im Power-Menü anzeigen oder ändern</string>
+    <string name="powermenu_screenshot">Bildschirmfoto</string>
+    <string name="powermenu_torch">Taschenlampe</string>
+    <string name="powermenu_power">Herunterfahren</string>
+    <string name="powermenu_advanced">Erweiterter Neustart</string>
+    <string name="powermenu_restart">Neustart</string>
+    <string name="powermenu_airplane">Flugmodus</string>
+    <string name="powermenu_settings">Einstellungen</string>
+    <string name="powermenu_lockdown">Sperren</string>
+    <string name="powermenu_soundpanel">Soundpanel</string>
+    <string name="powermenu_users">Benutzer</string>
+    <string name="powermenu_logout">Abmelden</string>
+    <string name="powermenu_emergency">Notfall</string>
+
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Erweiterten Neustart aktivieren</string>
+    <string name="global_actions_advanced_reboot_summary">Optionen für Recovery, Bootloader und Fastboot anzeigen</string>
+
+    <!-- Double Tap Lockscreen to Sleep -->
+    <string name="double_tap_to_sleep_lockscreen_title">Sperrbildschirm 2x tippen für Ruhemodus</string>
+    <string name="double_tap_to_sleep_lockscreen_summary">Zweimal im oberen Drittel oder auf den unteren Verknüpfungsbereich des Sperrbildschirms tippen, um das Gerät in den Ruhezustand zu versetzen</string>
+
+    <!-- Double tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Statusleiste 2x tippen für Ruhemodus</string>
+    <string name="double_tap_to_sleep_summary">Die Statusleiste zweimal antippen, um das Gerät in den Ruhemodus zu versetzen</string>
+
+    <!--3-Finger screenshot-->
+    <string name="three_finger_gesture">Drei-Finger-Geste</string>
+    <string name="three_finger_gesture_summary">Mit drei Fingern über den Bildschirm wischen, um ein Bildschirmfoto aufzunehmen</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="torch_power_button_gesture_title">Taschenlampe einschalten wenn Display aus ist</string>
+    <string name="torch_power_button_gesture_none">Deaktiviert</string>
+    <string name="torch_power_button_gesture_dt">Zweimal in Folge die Ein-/Aus-Taste drücken</string>
+    <string name="torch_power_button_gesture_dt_toast">Das Wechseln zur Kamera per Ein-/Aus-Taste ist jetzt deaktiviert</string>
+    <string name="torch_power_button_gesture_lp">Ein-/Aus-Taste lange gedrückt halten</string>
+
+    <!-- Buttons title -->
+    <string name="volume_category">Lautstärketasten</string>
+
+    <!--Volume keys -->
+    <string name="volume_rocker_wake_title">Lautstärketaste zum Einschalten verwenden</string>
+    <string name="volume_rocker_wake_summary">Durch Drücken der Lautstärketaste schaltet sich das Gerät ein</string>
+    <string name="volume_rocker_music_controls_title">Musikwiedergabe</string>
+    <string name="volume_rocker_music_controls_summary">Track wechseln durch langes Drücken der Lautstärketasten (solange das Display aus ist)</string>
+
+    <!-- Quick QS pulldown -->
+    <string name="status_bar_quick_qs_pulldown">Schnelles Herunterziehen des QS Panel</string>
+    <string name="quick_pulldown_none">Aus</string>
+    <string name="quick_pulldown_right">Statusleiste von rechts herunterziehen</string>
+    <string name="quick_pulldown_left">Statusleiste von links herunterziehen</string>
+
+    <!-- Lockscreen media artwork -->
+    <string name="lockscreen_media_blur_title">Unschärfegrad für Albumcovergrafik einstellen</string>
+    <string name="show_lockscreen_media_art_title">Albumcover</string>
+    <string name="lockscreen_media_art_options_title">Albumcover auf dem Sperrbildschirm anzeigen</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Bei erkanntem Fingerabdruck vibrieren</string>
+    <string name="fprint_sucess_vib_summary">Bei erfolgreicher Fingerabdruck-Erkennung vibrieren</string>
+    <string name="fprint_error_vib_title">Bei nichterkanntem Fingerabdruck vibrieren</string>
+    <string name="fprint_error_vib_summary">Bei fehlgeschlagener Fingerabdruck-Erkennung vibrieren</string>
+
+    <!-- Custom carrier label and position -->
+    <string name="carrier_label_settings_title">Mobilfunk-Netzbetreiber</string>
+    <string name="carrier_label_settings_summary">Mobilfunk-Netzbetreiber-Bezeichnung anpassen</string>
+    <string name="custom_carrier_label_title">Benutzerdefinierte Netzbetreiber-Bezeichnung</string>
+    <string name="custom_carrier_label_explain">Eine benutzerdefinierte Bezeichnung eingeben. Oder Feld leerlassen, um den vorgegebenen Netznamen zu verwenden</string>
+    <string name="custom_carrier_label_notset">Benutzerdefinierte Bezeichnung derzeit nicht festgelegt</string>
+    <string name="show_carrier_title">Anzeige der Netzbetreiber-Bezeichnung</string>
+    <string name="show_carrier_disabled">Aus</string>
+    <string name="show_carrier_keyguard">Sperrbildschirm</string>
+    <string name="show_carrier_statusbar">Statusleiste</string>
+    <string name="show_carrier_enabled">Beides</string>
+
+    <!-- Carrier Label -->
+    <string name="carrierlabel_title">Bezeichnung des Netzbetreibers</string>
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G-Symbol</string>
+    <string name="show_fourg_icon_summary">4G-Symbol statt des LTE-Symbols anzeigen</string>
+
+    <!-- Power menu on lockscreen -->
+    <string name="lockscreen_power_menu_disabled_title">Power-Menü auf dem Sperrbildschirm deaktivieren</string>
+    <string name="lockscreen_power_menu_disabled_summary">Diese Option deaktiviert das Power-Menü nur bei einer sicheren Displaysperre</string>
+
+    <!-- Status bar clock and date options -->
+    <string name="status_bar_clock_title">Uhr- &amp; Datumsanzeige</string>
+    <string name="status_bar_clock">Uhr &amp; Datum</string>
+    <string name="clock_enabled">Ein</string>
+    <string name="clock_disabled">Aus</string>
+    <string name="statusbar_clock_style_title">Uhr &amp; Datum positionieren</string>
+    <string name="statusbar_clock_style_right">Rechts</string>
+    <string name="statusbar_clock_style_centre">Mittig</string>
+    <string name="statusbar_clock_style_left">Links</string>
+    <string name="status_bar_clock_style_reset">Farbe zurücksetzen</string>
+    <string name="status_bar_show_clock_title">Uhr &amp; Datum anzeigen</string>
+    <string name="status_bar_am_pm_title">AM/PM-Anzeige</string>
+    <string name="status_bar_am_pm_info">24-Stunden-Format ist aktiviert</string>
+    <string name="clock_seconds_display">Sekunden anzeigen</string>
+    <string name="enable_clock_weekday">Wochentag</string>
+    <string name="enable_clock_weekday_summary">Abgekürzter Wochentag vor der Uhrzeit anzeigen</string>
+    <string name="dont_show">Nicht anzeigen</string>
+    <string name="clock_date_display">Datum</string>
+    <string name="clock_date_display_summary">Benutzerdefiniertes Datum vor der Uhrzeit anzeigen</string>
+    <string name="clock_date_style">Datum Schriftstil</string>
+    <string name="clock_date_format">Datumsformat</string>
+    <string name="clock_date_string_edittext_title">Eingabe nur im vorgegebenen Datumsformat möglich, z.B. MM/TT/JJ</string>
+    <string name="clock_date_string_edittext_summary">Zeichenfolge eingeben</string>
+    <string name="am_pm_clock_normal">Normale Schrift</string>
+    <string name="am_pm_clock_small">Kleine Schrift</string>
+    <string name="am_pm_clock_none">Nicht anzeigen</string>
+    <string name="clock_date_display_none">Nicht anzeigen</string>
+    <string name="clock_date_display_small">Kleine Schrift</string>
+    <string name="clock_date_display_normal">Normale Schrift</string>
+    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_style_lowercase">Kleinbuchstaben</string>
+    <string name="clock_date_style_uppercase">Großbuchstaben</string>
+    <string name="clock_date_right">Rechts neben der Uhrzeit</string>
+    <string name="clock_date_left">Links neben der Uhrzeit</string>
+    <string name="clock_date_position">Datumsanzeige positionieren</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="traffic_title">Netzwerkmonitor</string>
+    <string name="network_traffic">Netzwerkaktivität</string>
+    <string name="network_traffic_state_title">Netzwerkaktivität anzeigen</string>
+    <string name="network_traffic_location">Netzwerkaktivitätsanzeige</string>
+    <string name="traffic_disabled">Nicht anzeigen</string>
+    <string name="traffic_statusbar">Statusleiste</string>
+    <string name="traffic_expanded_statusbar">Erweiterte Statusleiste</string>
+    <string name="network_traffic_autohide_threshold_title">Netzwerkaktivität anzeigen ab</string>
+    <string name="network_traffic_arrow">Richtungspfeile anzeigen</string>
+    <string name="network_traffic_arrow_summary">Richtungspfeile bei Netzwerkaktivität anzeigen</string>
+    <string name="network_traffic_type">Anzeigemodus auswählen</string>
+    <string name="show_network_traffic_combined">Kombiniert (Upload + Download)</string>
+    <string name="show_network_traffic_dynamic">Dynamisch</string>
+    <string name="show_network_traffic_up">Upload</string>
+    <string name="show_network_traffic_down">Download</string>
+    <string name="show_network_traffic_all">Beides</string>
+    <string name="nettraf_font_size">Schriftgröße bei einzeiliger Anzeige</string>
+
+    <!-- CAF data activity arrows -->
+    <string name="data_activity_arrow_title">CAF-Datenaktivitätspfeile anzeigen</string>
+    <string name="data_activity_arrow_summary">Datenaktivität für WLAN und mobile Daten anzeigen</string>
+
+    <!-- Data disabled icon -->
+    <string name="data_disabled_icon_title">Daten-deaktiviert-Symbol anzeigen</string>
+    <string name="data_disabled_icon_summary">Kreuze neben der Signalleiste anzeigen, wenn Daten deaktiviert sind</string>
+
+    <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">Roaming-Zeichen</string>
+    <string name="roaming_indicator_icon_summary">Roaming-Zeichen im Signalsymbol anzeigen, wenn sich das Gerät im Roaming-Modus befindet</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Erweiterter Status beim Ladevorgang</string>
+    <string name="lockscreen_battery_info_summary">Auf dem Sperrbildschirm wird die vom System ermittelte Stromstärke, Ladespannung, Wattanzahl und Akkutemperatur während des Ladevorgangs angezeigt</string>
+
+    <string name="fonts_icon_title">Symbolformen, Schriftarten und Navigationsleisten-Layouts</string>
+    <string name="theme_customization_icon_shape_title">Symbolform</string>
+    <string name="theme_customization_font_title">Überschrift / Schriftart</string>
+    <string name="theme_customization_navbar_title">3-Tasten-Navigationsleisten-Layout</string>
+
+    <string name="ambient_ui">Ambient/Always on display</string>
+    <string name="ambient_battery_title">Akkustandanzeige</string>
+
+    <!-- AoD battery bar -->
+    <string name="keyguard_show_battery_title">Akkustandbalken beim Laden</string>
+    <string name="keyguard_show_battery_summary">Während des Ladevorgangs einen Akkustandbalken auf dem Ambient Display anzeigen</string>
+    <string name="keyguard_show_battery_always_title">Akkustandbalken ständig anzeigen</string>
+    <string name="keyguard_show_battery_always_summary">Akkustandbalken immer auf dem Ambient Display anzeigen</string>
+
+    <!-- Ambient display battery percentage -->
+    <string name="ambient_battery_percent_title">Akkuladestand am Rand unten anzeigen</string> 
+    <string name="ambient_battery_percent_summary">Akkuladestand als Prozentwert auf dem Ambient Display anzeigen</string>
+
+    <!-- Battery Settings -->
+    <string name="battery_settings_title">Akku-Anzeige anpassen</string>
+
+    <!-- Battery Styles -->
+    <string name="battery_style_category_title">Akku-Anzeigestil</string>
+    <string name="battery_percent_title">Akku-Prozentsatz</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_style_title">Akku-Symbol</string>
+    <string name="status_bar_battery_style_icon_portrait">Batterie (Standard)</string>
+    <string name="status_bar_battery_style_circle">Kreis</string>
+    <string name="status_bar_battery_style_dotted_circle">Gepunkteter Kreis</string>
+    <string name="status_bar_battery_style_filled_circle">Ausgefüllter Kreis</string>
+    <string name="status_bar_battery_style_text">Nur Prozentsatz</string>
+    <string name="status_bar_battery_style_hidden">Nicht anzeigen</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Akku-Prozentsatz</string>
+    <string name="status_bar_battery_percentage_default">Nicht anzeigen (Standard)</string>
+    <string name="status_bar_battery_percentage_text_inside">Im Symbol</string>
+    <string name="status_bar_battery_percentage_text_next">Neben dem Symbol</string>
+
+    <!-- QS battery estimates -->
+    <string name="qs_show_battery_estimate_title">Geschätzte Akkulaufzeit</string>
+    <string name="qs_show_battery_estimate_summary">Geschätzte verbleibende Akkulaufzeit neben dem Akku-Symbol anzeigen, sofern verfügbar</string>
+
+    <!-- Navigation bar -->
+    <string name="navigation_bar_title">Navigationsleiste</string>
+    <string name="navigation_bar_summary">Steuert, ob die Navigationsleiste angezeigt wird</string>
+    <string name="navigation_bar_arrow_keys_title">Cursortasten während der Eingabe anzeigen</string>
+    <string name="navigation_bar_arrow_keys_summary">Während der Eingabe wird jeweils links und rechts eine Cursortaste in der Navigationsleiste angezeigt</string>
+    <string name="navigation_bar_layout_title">Layout</string>
+    <string name="navigation_bar_layout_summary">Layout der Navigationsleiste anpassen</string>
+    <string name="navigation_bar_help_text">Diese Einstellungen sind primär auf die 3-Tasten-Navigationsleiste ausgelegt. Wenn Du die Gestenbedienung verwendest und diese anpassen möchten, z.B um den Gestengriff auszublenden, bitte hierhin wechseln: Einstellungen>System>Gesten und Bewegungen.</string>
+
+    <!-- Ambient Wake gesture -->
+    <string name="ambient_pulse_title">Ambient Pulse</string>
+    <string name="ambient_wake_gestures_title">Ambient-Weckgeste</string>
+    <string name="ambient_wake_gestures_summary">Beim Aufwecken des Bildschirms das Ambient Display anstelle des normalen Sperrbildschirms anzeigen (Android 10)</string>
+
+    <!-- Ambient music ticker -->
+    <string name="pulse_on_new_tracks_title">Music ticker</string>
+    <string name="pulse_on_new_tracks_summary">Immer wenn ein neuer Songtitel spielt, wird das Ambient Display für einen Moment eingeschaltet.</string>
+
+    <!-- Navbar Animation -->
+    <string name="pixel_navbar_anim_title">Pixel-Animation</string>
+    <string name="pixel_navbar_anim_summary">Animation der Home-Taste aktivieren</string>
+
+    <!-- Pulse music visualizer -->
+    <string name="pulse_category">Pulsierender Audio-Equalizer</string>
+    <string name="pulse_help_policy_notice_title">Über Pulse</string>
+    <string name="pulse_help_policy_notice_summary">Pulse ist ein brillanter Audio-Grafik-Equalizer, der angezeigt wird während Musik auf dem Gerät abgespielt wird</string>
+    <string name="pulse_settings">Pulse</string>
+    <string name="pulse_settings_summary">Pulse Audio-Equalizer für Navigationsleiste und Sperrbildschirm</string>
+    <string name="show_navbar_pulse_title">Pulse in der Navigationsleiste</string>
+    <string name="show_navbar_pulse_summary">Audio-Equalizer beim Abspielen von Musik in der Navigationsleiste anzeigen</string>
+    <string name="show_lockscreen_pulse_title">Pulse auf dem Sperrbildschirm</string>
+    <string name="show_lockscreen_pulse_summary">Audio-Equalizer beim Abspielen von Musik auf dem Sperrbildschirm anzeigen</string>
+    <string name="show_ambient_pulse_title">Pulse auf dem Ambient Display</string>
+    <string name="show_ambient_pulse_summary">Audio-Equalizer beim Abspielen von Musik auf dem Ambient Display anzeigen</string>
+    <string name="pulse_render_mode_title">Rendermodus</string>
+    <string name="pulse_render_mode_fading_bars">Verblassende Blöcke</string>
+    <string name="pulse_render_mode_solid_lines">Durchgezogene Linien</string>
+    <string name="pulse_legacy_mode_advanced_category">Verblassende Blöcke konfigurieren</string>
+    <string name="pulse_custom_fudge_factor">Amplitude</string>
+    <string name="pulse_lavalamp_speed_title">Lava-Lampe Geschwindigkeit</string>
+    <string name="pulse_solid_units_count">Anzahl durchgezogener Linien</string>
+    <string name="pulse_solid_units_opacity">Deckkraft der durchgezogenen Linien</string>
+    <string name="pulse_solid_units_rounded_title">Rundung</string>
+    <string name="pulse_solid_units_rounded_summary">Durchgezogene Linien mit abgerundeter Spitze</string>
+    <string name="pulse_solid_dimen_category">Moduseinstellungen für durchgezogene Linien</string>
+    <string name="pulse_color_mode_title">Farbe</string>
+    <string name="pulse_color_accent">Akzentfarbe</string>
+    <string name="pulse_color_custom">Benutzerdefiniert</string>
+    <string name="pulse_color_lava_lamp">Lava-Lampe</string>
+    <string name="pulse_color_user_title">Farbe wählen</string>
+    <string name="pulse_smoothing_enabled_title">Glättung einschalten</string>
+    <string name="pulse_smoothing_enabled_summary">Jeder Balken wird flüssiger animiert</string>
+    <string name="pulse_custom_dimen">Balkenbreite</string>
+    <string name="pulse_custom_div">Abstände der Balken</string>
+    <string name="pulse_filled_block_size">Blockgröße</string>
+    <string name="pulse_empty_block_size">Abstände der Blöcke</string>
+
+    <!-- Units -->
+    <string name="unit_seconds">Sekunden</string>
+    <string name="unit_milliseconds">Millisekunden</string>
+    <string name="unit_pixels">dp</string>
+
+    <!-- Keyguard force small clock -->
+    <string name="lockscreen_small_clock_title">Kleine Uhranzeige erzwingen</string>
+    <string name="lockscreen_small_clock_summary">Auch wenn keine Benachrichtigungen vorliegen wird die große Uhranzeige unterdrückt</string>
+
+    <!-- Screen off animation -->
+    <string name="animation_category">Animationen</string>
+    <string name="screen_off_animation_title">Screen-off-Animation</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Verkleinern</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Haptisches Feedback bei Berührung</string>
+    <string name="quick_settings_vibrate_summary">Berühren der Schaltflächen löst ein haptisches Feedback aus</string>
+</resources>
