@@ -29,11 +29,11 @@
         android:key="gestures_category"
         android:title="@string/gestures_category" >
 
-        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+        <Preference
             android:key="three_finger_gesture"
-            android:title="@string/three_finger_gesture"
+            android:title="@string/three_finger_gesture_title"
             android:summary="@string/three_finger_gesture_summary"
-            android:defaultValue="false" />
+            android:fragment="com.pixeldust.settings.fragments.ThreeFingerGesture"/>
 
     </PreferenceCategory>
 

@@ -145,9 +145,10 @@
     <string name="double_tap_to_sleep_title">Statusleiste 2x tippen für Ruhemodus</string>
     <string name="double_tap_to_sleep_summary">Die Statusleiste zweimal antippen, um das Gerät in den Ruhemodus zu versetzen</string>
 
-    <!--3-Finger screenshot-->
+    <!-- 3-Finger screenshot -->
+    <string name="three_finger_gesture_title">Für Bildschirmaufnahme wischen</string>
     <string name="three_finger_gesture">Drei-Finger-Geste</string>
-    <string name="three_finger_gesture_summary">Mit drei Fingern über den Bildschirm wischen, um ein Bildschirmfoto aufzunehmen</string>
+    <string name="three_finger_gesture_summary">Mit drei Fingern wischen, um ein Bildschirmfoto aufzunehmen</string>
 
     <!-- Torch Power button gestures -->
     <string name="torch_power_button_gesture_title">Taschenlampe einschalten wenn Display aus ist</string>
