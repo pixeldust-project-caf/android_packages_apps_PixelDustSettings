@@ -16,73 +16,28 @@
 
 package com.pixeldust.settings.fragments;
 
-import android.content.Context;
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
-import androidx.preference.*;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.settings.dashboard.DashboardFragment;
-import com.android.settings.development.OverlayCategoryPreferenceController;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.core.AbstractPreferenceController;
-import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.settingslib.search.SearchIndexable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class Customisation extends DashboardFragment implements OnPreferenceChangeListener {
+public class Customisation extends SettingsPreferenceFragment {
 
-    public static final String TAG = "Customisation";
+    private static final String TAG = "Customisation";
 
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+        addPreferencesFromResource(R.xml.customisation);
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsEvent.PIXELDUST;
     }
-
-    @Override
-    protected String getLogTag() {
-        return TAG;
-    }
-
-    @Override
-    protected int getPreferenceScreenResId() {
-        return R.xml.customisation;
-    }
-
-    @Override
-    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
-        return buildPreferenceControllers(context, getSettingsLifecycle(), this);
-    }
-
-    private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, Lifecycle lifecycle, Fragment fragment) {
-        final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.adaptive_icon_shape"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.font"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.navbar"));            
-        return controllers;
-    }
-
-    /**
-     * For Search.
-     */
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.customisation);
 }

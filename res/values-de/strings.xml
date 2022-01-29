@@ -277,11 +277,6 @@
     <string name="lockscreen_battery_info_title">Erweiterter Status beim Ladevorgang</string>
     <string name="lockscreen_battery_info_summary">Auf dem Sperrbildschirm wird die vom System ermittelte Stromstärke, Ladespannung, Wattanzahl und Akkutemperatur während des Ladevorgangs angezeigt</string>
 
-    <string name="fonts_icon_title">Symbolformen, Schriftarten und Navigationsleisten-Layouts</string>
-    <string name="theme_customization_icon_shape_title">Symbolform</string>
-    <string name="theme_customization_font_title">Überschrift / Schriftart</string>
-    <string name="theme_customization_navbar_title">3-Tasten-Navigationsleisten-Layout</string>
-
     <string name="ambient_ui">Ambient/Always on display</string>
     <string name="ambient_battery_title">Akkustandanzeige</string>
 

@@ -27,21 +27,5 @@
             android:fragment="com.pixeldust.settings.fragments.MonetEngine"/>
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="misc_category"
-        android:title="@string/fonts_icon_title">
-
-        <ListPreference
-            android:key="android.theme.customization.adaptive_icon_shape"
-            android:title="@string/theme_customization_icon_shape_title"/>
-
-        <ListPreference
-            android:key="android.theme.customization.font"
-            android:title="@string/theme_customization_font_title"/>
-
-        <ListPreference
-            android:key="android.theme.customization.navbar"
-            android:title="@string/theme_customization_navbar_title"/>
-    </PreferenceCategory>
 </PreferenceScreen>
 

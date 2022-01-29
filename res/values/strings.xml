@@ -277,11 +277,6 @@
     <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
     <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lockscreen while charging</string>
 
-    <string name="fonts_icon_title">Icon Shapes, fonts and navbar layouts</string>
-    <string name="theme_customization_icon_shape_title">Icon shape</string>
-    <string name="theme_customization_font_title">Headline / Body font</string>
-    <string name="theme_customization_navbar_title">3-button navbar layout</string>
-
     <string name="ambient_ui">Ambient/Always on display</string>
     <string name="ambient_battery_title">Ambient battery</string>
 
