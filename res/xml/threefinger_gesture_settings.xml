@@ -17,8 +17,13 @@
 
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:title="@string/three_finger_gesture_title">
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="swipe_to_screenshot_video" 
+        settings:searchable="false"
+        settings:lottie_rawRes="@raw/lottie_gesture_swipe_to_screenshot"/>
 
     <com.pixeldust.support.preference.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
