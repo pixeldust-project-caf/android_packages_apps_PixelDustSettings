@@ -51,7 +51,7 @@
     <string name="buttons_title">Tasten</string>
 
     <!-- General Tweaks -->
-    <string name="general_tweaks_title">Allgemeine Anpassungen</string>
+    <string name="general_tweaks_title">Allgemeines</string>
     <string name="general_category">Allgemein</string>
 
     <!-- About -->
@@ -61,8 +61,8 @@
     <string name="crew_title">PixelDust Team</string>
     <string name="pixeldust_crew_title">Unsere Mannschaft</string>
     <string name="pixeldust_crew_summary">Finde heraus, wer wir sind</string>
-    <string name="join_crew_title">Magst du auch mitmachen?</string>
-    <string name="join_crew_summary">Mach dich schlau, wie Du dich bei uns bewerben kannst</string>
+    <string name="join_crew_title">Magst du mitmachen?</string>
+    <string name="join_crew_summary">Hier kannst du dich genauer informieren</string>
     <string name="donate_pixeldust_title">Unterstütze uns</string>
     <string name="donate_pixeldust_summary">Spende was, um die Weiterentwicklung zu unterstützen</string>
     <string name="pixeldust_source_title">GitHub</string>
@@ -101,8 +101,8 @@
 
     <!-- App info dialog -->
     <string name="settings_dialog_title">Hilf uns, dir zu helfen!</string>
-    <string name="settings_dialog_message">Wenn Du einen Fehler mit einer dieser Einstellungen findest, melde ihn in unserer Telegram-Gruppe. Du MUSST bei einem Fehlerbericht Folgendes angeben:\n\n1. Ein logcat oder last_kmsg\n2. Kernel und verwendete Mods\n3. Nützliche Informationen\n\nWenn Du etwas nicht angemessen meldest, erwarte auch NICHT, dass Probleme gelöst werden.</string>
-    <string name="settings_dialog_toast">LIES DAS GANZE DURCH!</string>
+    <string name="settings_dialog_message">Wenn Du einen Fehler bei diesen Features findest, melde es in unserer Telegram-Gruppe. Du MUSST bei einem Fehlerbericht Folgendes angeben:\n\n1. Ein logcat oder last_kmsg\n2. Kernel und verwendete Mods\n3. Nützliche Informationen\n\nWenn Du einen unvollständigen Fehlerbericht sendest, erwarte NICHT, dass das Problem gelöst werden kann.</string>
+    <string name="settings_dialog_toast">LIES ALLES DURCH BITTE!</string>
     <string name="artwork_media_fade_level_summary">Ausblenden der Mediengrafik</string>
 
     <!-- Monet Engine -->
@@ -325,15 +325,15 @@
     <string name="navigation_bar_title">Navigationsleiste</string>
     <string name="navigation_bar_summary">Steuert, ob die Navigationsleiste angezeigt wird</string>
     <string name="navigation_bar_arrow_keys_title">Cursortasten während der Eingabe anzeigen</string>
-    <string name="navigation_bar_arrow_keys_summary">Während der Eingabe wird jeweils links und rechts eine Cursortaste in der Navigationsleiste angezeigt</string>
+    <string name="navigation_bar_arrow_keys_summary">Während der Eingabe werden Cursortasten links und rechts in der Navigationsleiste angezeigt</string>
     <string name="navigation_bar_layout_title">Layout</string>
     <string name="navigation_bar_layout_summary">Layout der Navigationsleiste anpassen</string>
-    <string name="navigation_bar_help_text">Diese Einstellungen sind primär auf die 3-Tasten-Navigationsleiste ausgelegt. Wenn Du die Gestenbedienung verwendest und diese anpassen möchten, z.B um den Gestengriff auszublenden, bitte hierhin wechseln: Einstellungen>System>Gesten und Bewegungen.</string>
+    <string name="navigation_bar_help_text">Diese Einstellungsseite richtet sich primär an die 3-Tasten-Navigationsleiste. Wenn Du die Gestenbedienung verwendest und diese anpassen möchtest, z.B um den Gestengriff auszublenden, wechsel bitte hierhin: Einstellungen>System>Gesten und Bewegungen.</string>
 
     <!-- Ambient Wake gesture -->
     <string name="ambient_pulse_title">Ambient Pulse</string>
     <string name="ambient_wake_gestures_title">Ambient-Weckgeste</string>
-    <string name="ambient_wake_gestures_summary">Beim Aufwecken des Bildschirms das Ambient Display anstelle des normalen Sperrbildschirms anzeigen (Android 10)</string>
+    <string name="ambient_wake_gestures_summary">Beim Aufwecken des Bildschirms das Ambient Display anzeigen statt des normalen Sperrbildschirms</string>
 
     <!-- Ambient music ticker -->
     <string name="pulse_on_new_tracks_title">Music ticker</string>
@@ -364,7 +364,7 @@
     <string name="pulse_solid_units_count">Anzahl durchgezogener Linien</string>
     <string name="pulse_solid_units_opacity">Deckkraft der durchgezogenen Linien</string>
     <string name="pulse_solid_units_rounded_title">Rundung</string>
-    <string name="pulse_solid_units_rounded_summary">Durchgezogene Linien mit abgerundeter Spitze</string>
+    <string name="pulse_solid_units_rounded_summary">Durchgezogene Linien mit abgerundeten Spitzen</string>
     <string name="pulse_solid_dimen_category">Moduseinstellungen für durchgezogene Linien</string>
     <string name="pulse_color_mode_title">Farbe</string>
     <string name="pulse_color_accent">Akzentfarbe</string>
@@ -394,6 +394,6 @@
     <string name="screen_off_animation_scale">Verkleinern</string>
 
     <!-- QuickSettings haptic feedback -->
-    <string name="quick_settings_vibrate_title">Haptisches Feedback bei Berührung</string>
-    <string name="quick_settings_vibrate_summary">Berühren der Schaltflächen löst ein haptisches Feedback aus</string>
+    <string name="quick_settings_vibrate_title">Haptisches Feedback beim Antippen</string>
+    <string name="quick_settings_vibrate_summary">Das Berühren von Schaltflächen löst ein haptisches Feedback aus</string>
 </resources>
