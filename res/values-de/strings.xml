@@ -408,4 +408,7 @@
     <string name="theme_customization_device_default">Gemäß Standard fürs Gerät</string>
 
     <string name="theme_customization_navbar_title">3-Tasten-Navigationsleisten-Layout</string>
+
+    <string name="use_photos_spoof_title">Unbegrenzter Google Fotos Speicherplatz</string>
+    <string name="use_photos_spoof_summary">Dein Gerät wird als Pixel XL ausgewiesen, um kostenlos Videos und Fotos in verlustfreier Qualität in Google Fotos zu speichern</string>
 </resources>
