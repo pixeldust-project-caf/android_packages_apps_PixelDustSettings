@@ -242,25 +242,6 @@
     <string name="clock_date_left">Links neben der Uhrzeit</string>
     <string name="clock_date_position">Datumsanzeige positionieren</string>
 
-    <!-- Statusbar net monitor -->
-    <string name="traffic_title">Netzwerkmonitor</string>
-    <string name="network_traffic">Netzwerkaktivität</string>
-    <string name="network_traffic_state_title">Netzwerkaktivität anzeigen</string>
-    <string name="network_traffic_location">Netzwerkaktivitätsanzeige</string>
-    <string name="traffic_disabled">Nicht anzeigen</string>
-    <string name="traffic_statusbar">Statusleiste</string>
-    <string name="traffic_expanded_statusbar">Erweiterte Statusleiste</string>
-    <string name="network_traffic_autohide_threshold_title">Netzwerkaktivität anzeigen ab</string>
-    <string name="network_traffic_arrow">Richtungspfeile anzeigen</string>
-    <string name="network_traffic_arrow_summary">Richtungspfeile bei Netzwerkaktivität anzeigen</string>
-    <string name="network_traffic_type">Anzeigemodus auswählen</string>
-    <string name="show_network_traffic_combined">Kombiniert (Upload + Download)</string>
-    <string name="show_network_traffic_dynamic">Dynamisch</string>
-    <string name="show_network_traffic_up">Upload</string>
-    <string name="show_network_traffic_down">Download</string>
-    <string name="show_network_traffic_all">Beides</string>
-    <string name="nettraf_font_size">Schriftgröße bei einzeiliger Anzeige</string>
-
     <!-- CAF data activity arrows -->
     <string name="data_activity_arrow_title">CAF-Datenaktivitätspfeile anzeigen</string>
     <string name="data_activity_arrow_summary">Datenaktivität für WLAN und mobile Daten anzeigen</string>
