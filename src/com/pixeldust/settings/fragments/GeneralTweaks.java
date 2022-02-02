@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,37 +16,30 @@
 
 package com.pixeldust.settings.fragments;
 
-import android.app.ActivityManagerNative;
 import android.content.Context;
 import android.content.ContentResolver;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.os.RemoteException;
 import android.os.ServiceManager;
-import androidx.preference.Preference;
-import androidx.preference.ListPreference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
+import android.os.SystemProperties;
 import android.provider.Settings;
 import android.util.Log;
-import android.view.WindowManagerGlobal;
-import android.view.IWindowManager;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-import java.util.Locale;
-import android.text.TextUtils;
-import android.view.View;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.settings.Utils;
 
 public class GeneralTweaks extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private static final String KEY_SPOOF = "use_photos_spoof";
+    private static final String SYS_SPOOF = "persist.sys.photo";
+
+    private SwitchPreference mSpoof;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +50,10 @@ public class GeneralTweaks extends SettingsPreferenceFragment implements OnPrefe
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
 
+        final String useSpoof = SystemProperties.get(SYS_SPOOF, "1");
+        mSpoof = (SwitchPreference) findPreference(KEY_SPOOF);
+        mSpoof.setChecked("1".equals(useSpoof));
+        mSpoof.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -71,6 +68,11 @@ public class GeneralTweaks extends SettingsPreferenceFragment implements OnPrefe
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mSpoof) {
+            String value = ((Boolean) objValue) ? "1" : "0";
+            SystemProperties.set(SYS_SPOOF, value);
+            return true;
+        }
         return false;
     }
 }
