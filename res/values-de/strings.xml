@@ -406,4 +406,7 @@
     <string name="network_traffic_dynamic">Dynamisch</string>
     <string name="network_traffic_download">Download</string>
     <string name="network_traffic_upload">Upload</string>
+
+    <!-- User toggle for unlimited g00gle ph0t0s storage -->
+    <string name="photos_spoof_toast">Fotos-App neustarten, damit es wirksam wird</string>
 </resources>
