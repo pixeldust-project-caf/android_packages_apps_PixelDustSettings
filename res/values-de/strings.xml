@@ -388,8 +388,6 @@
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Label for the option that turns off customizations for a given category.-->
     <string name="theme_customization_device_default">Gemäß Standard fürs Gerät</string>
 
-    <string name="theme_customization_navbar_title">3-Tasten-Navigationsleisten-Layout</string>
-
     <!-- Network Traffic -->
     <string name="traffic_title">Netzwerkaktivität</string>
     <string name="traffic_summary">Netzwerkaktivitätsanzeige anpassen</string>
