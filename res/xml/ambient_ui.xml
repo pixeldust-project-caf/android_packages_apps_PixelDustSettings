@@ -48,7 +48,7 @@
             android:key="ambient_wake_gestures"
             android:title="@string/ambient_wake_gestures_title"
             android:summary="@string/ambient_wake_gestures_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <com.pixeldust.support.preference.SecureSettingSwitchPreference
             android:key="pulse_on_new_tracks"
