@@ -60,9 +60,7 @@ public class NavbarSettings extends DashboardFragment implements OnPreferenceCha
 
     private static final String KEY_NAVIGATION_BAR_ENABLED = "navbar_visibility";
     private static final String LAYOUT_SETTINGS = "layout_settings";
-    private static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
 
-    private SwitchPreference mPixelNavAnimation;
     private SwitchPreference mNavigationBar;
     private Preference mLayoutSettings;
 
@@ -93,8 +91,6 @@ public class NavbarSettings extends DashboardFragment implements OnPreferenceCha
         final boolean isThreeButtonNavbarEnabled = PixeldustUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton");
         mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
         mLayoutSettings.setEnabled(isThreeButtonNavbarEnabled);
-        mPixelNavAnimation = (SwitchPreference) findPreference(PIXEL_NAV_ANIMATION);
-        mPixelNavAnimation.setEnabled(isThreeButtonNavbarEnabled);
 
         mHandler = new Handler();
     }

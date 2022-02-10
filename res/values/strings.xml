@@ -315,10 +315,6 @@
     <string name="pulse_on_new_tracks_title">Music ticker</string>
     <string name="pulse_on_new_tracks_summary">Show Ambient Display when a new music track is played</string>
 
-    <!-- Navbar Animation -->
-    <string name="pixel_navbar_anim_title">Pixel animation</string>
-    <string name="pixel_navbar_anim_summary">Toggle home button animation</string>
-
     <!-- Pulse music visualizer -->
     <string name="pulse_category">Pulse music visualizer</string>
     <string name="pulse_help_policy_notice_title">About Pulse</string>
