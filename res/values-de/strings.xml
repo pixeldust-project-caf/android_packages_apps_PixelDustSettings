@@ -315,10 +315,6 @@
     <string name="pulse_on_new_tracks_title">Music ticker</string>
     <string name="pulse_on_new_tracks_summary">Immer wenn ein neuer Songtitel spielt, wird das Ambient Display für einen Moment eingeschaltet.</string>
 
-    <!-- Navbar Animation -->
-    <string name="pixel_navbar_anim_title">Pixel-Animation</string>
-    <string name="pixel_navbar_anim_summary">Animation der Home-Taste aktivieren</string>
-
     <!-- Pulse music visualizer -->
     <string name="pulse_category">Pulsierender Audio-Equalizer</string>
     <string name="pulse_help_policy_notice_title">Über Pulse</string>
