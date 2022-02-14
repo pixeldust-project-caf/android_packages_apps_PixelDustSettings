@@ -32,7 +32,6 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
@@ -65,7 +64,6 @@ public class MiscExtensions extends SettingsPreferenceFragment implements OnPref
         mLocationIndicator.setDefaultValue(locIndicator);
         mLocationIndicator.setChecked(Settings.Secure.getInt(resolver,
                 LOCATION_INDICATOR, locIndicator ? 1 : 0) == 1);
-        mLocationIndicator.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -80,14 +78,6 @@ public class MiscExtensions extends SettingsPreferenceFragment implements OnPref
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        final ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mLocationIndicator) {
-            int val = ((Boolean) objValue) ? 1 : 0;
-            Settings.Secure.putInt(resolver,
-                    LOCATION_INDICATOR, val);
-            PixeldustUtils.showSystemUiRestartDialog(getContext());
-            return true;
-        }
         return false;
     }
 }

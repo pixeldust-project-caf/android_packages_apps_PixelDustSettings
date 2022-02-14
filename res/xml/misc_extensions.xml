@@ -43,8 +43,7 @@
             android:title="@string/location_privacy_indicator_title"
             android:summaryOn="@string/location_privacy_indicator_summary_on"
             android:summaryOff="@string/location_privacy_indicator_summary_off"
-            android:defaultValue="true"
-            android:persistent="false" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
