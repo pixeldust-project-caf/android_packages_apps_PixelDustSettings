@@ -33,6 +33,8 @@
     <string name="icon_title">Icon</string>
     <string name="color_title">Color</string>
     <string name="colors_title">Colors</string>
+    <string name="search">Search</string>
+    <string name="search_apps">Search apps</string>
 
     <!-- PixelDustSettings categories -->
     <string name="fingerprint_category">Fingerprint</string>
