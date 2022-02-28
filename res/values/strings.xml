@@ -424,4 +424,8 @@
     <string name="location_privacy_indicator_title">Location access indicator</string>
     <string name="location_privacy_indicator_summary_on">Show location in the privacy chip</string>
     <string name="location_privacy_indicator_summary_off">Show location in status bar icons</string>
+
+    <!-- Combined signal icons in status bar -->
+    <string name="combined_status_bar_signal_icons_title">Combined signal icons</string>
+    <string name="combined_status_bar_signal_icons_summary">Show single combined icon for WiFi and mobile signal</string>
 </resources>

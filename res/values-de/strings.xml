@@ -424,4 +424,8 @@
     <string name="location_privacy_indicator_title">Indikator für Standortzugriff</string>
     <string name="location_privacy_indicator_summary_on">Standortzugriff im Datenschutzchip anzeigen</string>
     <string name="location_privacy_indicator_summary_off">Standortzugriff als Symbol in der Statusleiste anzeigen</string>
+
+    <!-- Combined signal icons in status bar -->
+    <string name="combined_status_bar_signal_icons_title">Kombinierte Signalsymbole</string>
+    <string name="combined_status_bar_signal_icons_summary">WLAN und Mobilfunksignal in einem einzigen Symbol kombinieren</string>
 </resources>

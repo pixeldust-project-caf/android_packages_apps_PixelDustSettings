@@ -30,8 +30,10 @@ import androidx.preference.ListPreference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
@@ -48,6 +50,7 @@ public class MiscExtensions extends SettingsPreferenceFragment implements OnPref
     private static final String LOCATION_INDICATOR = "enable_location_privacy_indicator";
 
     private SecureSettingSwitchPreference mLocationIndicator;
+    private SwitchPreference mCombinedStatusbarSignalIcons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,10 @@ public class MiscExtensions extends SettingsPreferenceFragment implements OnPref
         mLocationIndicator.setDefaultValue(locIndicator);
         mLocationIndicator.setChecked(Settings.Secure.getInt(resolver,
                 LOCATION_INDICATOR, locIndicator ? 1 : 0) == 1);
+
+        mCombinedStatusbarSignalIcons = (SwitchPreference) findPreference(
+                Settings.System.COMBINED_STATUS_BAR_SIGNAL_ICONS);
+        mCombinedStatusbarSignalIcons.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -77,7 +84,11 @@ public class MiscExtensions extends SettingsPreferenceFragment implements OnPref
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mCombinedStatusbarSignalIcons) {
+            PixeldustUtils.showSystemUiRestartDialog(getContext());
+            return true;
+        }
         return false;
     }
 }
