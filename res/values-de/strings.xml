@@ -35,6 +35,7 @@
     <string name="colors_title">Farben</string>
     <string name="search">Suchen</string>
     <string name="search_apps">Apps suchen</string>
+    <string name="disabled">Deaktiviert</string>
 
     <!-- PixelDustSettings categories -->
     <string name="fingerprint_category">Fingerabdruck</string>

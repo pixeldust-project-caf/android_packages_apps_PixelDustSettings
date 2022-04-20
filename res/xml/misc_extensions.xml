@@ -56,6 +56,7 @@
             android:title="@string/volte_icon_title"
             android:summary="@string/volte_icon_summary"
             android:defaultValue="0"
+            settings:defaultValueText="@string/disabled"
             android:max="9"
             settings:min="0"
             settings:units="" />
@@ -65,6 +66,7 @@
             android:title="@string/vowifi_icon_title"
             android:summary="@string/vowifi_icon_summary"
             android:defaultValue="0"
+            settings:defaultValueText="@string/disabled"
             android:max="8"
             settings:min="0"
             settings:units="" />
