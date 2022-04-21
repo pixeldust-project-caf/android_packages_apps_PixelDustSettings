@@ -20,7 +20,6 @@ import android.content.Context;
 
 import com.android.settings.core.BasePreferenceController;
 
-
 public class TopLevelPixelDustSettingsEntryPreferenceController extends BasePreferenceController {
 
     public TopLevelPixelDustSettingsEntryPreferenceController(Context context, String preferenceKey) {

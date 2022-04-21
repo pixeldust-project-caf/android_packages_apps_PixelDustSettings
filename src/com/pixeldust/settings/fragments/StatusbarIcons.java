@@ -18,23 +18,17 @@ package com.pixeldust.settings.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.AnimationDrawable;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
-import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.text.TextUtils;
-import android.view.ViewGroup.LayoutParams;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -49,20 +43,13 @@ import androidx.preference.PreferenceViewHolder;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.internal.util.pixeldust.ThemeUtils;
 import com.android.settings.R;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Arrays;
-
-import org.json.JSONObject;
-import org.json.JSONException;
 
 public class StatusbarIcons extends SettingsPreferenceFragment {
 

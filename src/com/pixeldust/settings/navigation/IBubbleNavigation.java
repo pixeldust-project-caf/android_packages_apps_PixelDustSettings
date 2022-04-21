@@ -1,6 +1,7 @@
 package com.pixeldust.settings.navigation;
 
 import android.graphics.Typeface;
+
 import com.pixeldust.settings.navigation.BubbleNavigationChangeListener;
 
 @SuppressWarnings("unused")

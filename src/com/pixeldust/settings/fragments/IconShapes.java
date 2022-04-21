@@ -20,29 +20,35 @@ import static com.android.internal.util.pixeldust.ThemeUtils.ICON_SHAPE_KEY;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
-import android.content.pm.PackageManager;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.ShapeDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Gravity;
+import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.text.TextUtils;
-import android.view.ViewGroup.LayoutParams;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.core.graphics.ColorUtils;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceViewHolder;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 import androidx.recyclerview.widget.RecyclerView;
@@ -54,19 +60,14 @@ import androidx.preference.PreferenceViewHolder;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.internal.util.pixeldust.ThemeUtils;
 import com.android.settings.R;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.Utils;
+import com.android.settingslib.search.Indexable;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
-
-import org.json.JSONObject;
-import org.json.JSONException;
 
 public class IconShapes extends SettingsPreferenceFragment {
 

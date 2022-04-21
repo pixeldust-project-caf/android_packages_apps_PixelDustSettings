@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,14 +22,20 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.SearchIndexableResource;
+import android.provider.Settings;
+import android.util.Log;
+
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
-import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.SearchIndexable;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
+import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -88,13 +94,25 @@ public class About extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.PIXELDUST;
+        return MetricsEvent.PIXELDUST;
     }
 
-    /**
-     * For search
-     */
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.about);
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+        new BaseSearchIndexProvider() {
+            @Override
+            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                    boolean enabled) {
+                final ArrayList<SearchIndexableResource> result = new ArrayList<>();
+                final SearchIndexableResource sir = new SearchIndexableResource(context);
+                sir.xmlResId = R.xml.about;
+                result.add(sir);
+                return result;
+            }
 
+            @Override
+            public List<String> getNonIndexableKeys(Context context) {
+                final List<String> keys = super.getNonIndexableKeys(context);
+                return keys;
+            }
+    };
 }

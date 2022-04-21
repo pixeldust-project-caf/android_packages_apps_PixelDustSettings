@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,15 +16,15 @@
 
 package com.pixeldust.settings.categories;
 
-import android.content.Context;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.os.Bundle;
+
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -40,7 +40,6 @@ public class StatusBar extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.status_bar);
 
         ContentResolver resolver = getActivity().getContentResolver();
-
     }
 
     @Override
@@ -62,6 +61,5 @@ public class StatusBar extends SettingsPreferenceFragment implements
         final String key = preference.getKey();
         return true;
     }
-
 }
 

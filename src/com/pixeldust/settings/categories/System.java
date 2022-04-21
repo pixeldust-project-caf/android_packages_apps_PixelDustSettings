@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,14 +16,10 @@
 
 package com.pixeldust.settings.categories;
 
-import android.content.Context;
 import android.content.ContentResolver;
-import android.content.res.Resources;
 import android.os.Bundle;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceGroup;
 
-import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -31,7 +27,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class System extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        OnPreferenceChangeListener {
 
     private static final String TAG = "System";
     private static final String PREF_BATTERY = "battery";
@@ -43,7 +39,6 @@ public class System extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.system);
 
         ContentResolver resolver = getActivity().getContentResolver();
-
     }
 
     @Override

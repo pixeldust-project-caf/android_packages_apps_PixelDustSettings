@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,8 +44,8 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.Preference;
 import androidx.viewpager.widget.ViewPager;
 
 import com.android.internal.logging.nano.MetricsProto;

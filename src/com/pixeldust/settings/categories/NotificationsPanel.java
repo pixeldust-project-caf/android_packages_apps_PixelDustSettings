@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ package com.pixeldust.settings.categories;
 
 import android.content.ContentResolver;
 import android.os.Bundle;
+
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
@@ -26,7 +27,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 public class NotificationsPanel extends SettingsPreferenceFragment implements
-        Preference.OnPreferenceChangeListener {
+        OnPreferenceChangeListener {
 
     private static final String TAG = "NotificationsPanel";
 

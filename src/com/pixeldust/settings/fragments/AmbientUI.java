@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 The PixelDust Project
+ * Copyright (C) 2021-2022 The PixelDust Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,21 +16,14 @@
 
 package com.pixeldust.settings.fragments;
 
-import android.app.ActivityManagerNative;
-import android.content.Context;
 import android.content.ContentResolver;
-import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.RemoteException;
-import android.os.ServiceManager;
 import android.os.UserHandle;
+import android.provider.SearchIndexableResource;
 import android.provider.Settings;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
-import android.view.IWindowManager;
-import android.view.WindowManagerGlobal;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -38,15 +31,21 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SearchIndexable
 public class AmbientUI extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     @Override
@@ -74,4 +73,23 @@ public class AmbientUI extends SettingsPreferenceFragment implements OnPreferenc
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         return false;
     }
+
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+        new BaseSearchIndexProvider() {
+            @Override
+            public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                    boolean enabled) {
+                final ArrayList<SearchIndexableResource> result = new ArrayList<>();
+                final SearchIndexableResource sir = new SearchIndexableResource(context);
+                sir.xmlResId = R.xml.ambient_ui;
+                result.add(sir);
+                return result;
+            }
+
+            @Override
+            public List<String> getNonIndexableKeys(Context context) {
+                final List<String> keys = super.getNonIndexableKeys(context);
+                return keys;
+            }
+    };
 }
