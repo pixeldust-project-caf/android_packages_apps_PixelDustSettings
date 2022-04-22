@@ -119,7 +119,7 @@
         android:key="pulse_2"
         android:title="@string/pulse_solid_dimen_category">
 
-        <com.pixeldust.support.preference.SecureSettingSeekBarPreference
+        <com.pixeldust.support.preference.SecureSettingSwitchPreference
             android:key="pulse_solid_units_rounded"
             android:title="@string/pulse_solid_units_rounded_title"
             android:summary="@string/pulse_solid_units_rounded_summary"
