@@ -32,6 +32,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
@@ -46,6 +47,10 @@ import java.util.List;
 public class QuickSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private ListPreference mQuickPulldown;
+    private Preference mQSLayoutColumns;
+    private Preference mQSLayoutColumnsLandscape;
+    private Preference mQSTileVerticalLayout;
+    private Preference mQSTileLabelHide;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,6 +67,15 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
         mQuickPulldown.setValue(String.valueOf(qpmode));
         mQuickPulldown.setSummary(mQuickPulldown.getEntry());
         mQuickPulldown.setOnPreferenceChangeListener(this);
+
+        mQSLayoutColumns = (Preference) findPreference("qs_layout_columns");
+        mQSLayoutColumns.setOnPreferenceChangeListener(this);
+        mQSLayoutColumnsLandscape = (Preference) findPreference("qs_layout_columns_landscape");
+        mQSLayoutColumnsLandscape.setOnPreferenceChangeListener(this);
+        mQSTileVerticalLayout = (Preference) findPreference("qs_tile_vertical_layout");
+        mQSTileVerticalLayout.setOnPreferenceChangeListener(this);
+        mQSTileLabelHide = (Preference) findPreference("qs_tile_label_hide");
+        mQSTileLabelHide.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -85,6 +99,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             int index = mQuickPulldown.findIndexOfValue((String) objValue);
             mQuickPulldown.setSummary(
                     mQuickPulldown.getEntries()[index]);
+            return true;
+        } else if (preference == mQSLayoutColumns || preference == mQSLayoutColumnsLandscape
+                || preference == mQSTileVerticalLayout || preference == mQSTileLabelHide) {
+            PixeldustUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         return false;
