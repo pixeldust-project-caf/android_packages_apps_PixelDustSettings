@@ -465,4 +465,13 @@
     <string name="volume_steps_system_title">Lautstärkestufen: System</string>
     <string name="volume_steps_voice_call_title">Lautstärkestufen: Sprachanruf</string>
     <string name="volume_steps_reset">Zurücksetzen</string>
+
+    <!-- QS columns/tile customizations -->
+    <string name="qs_columns_category">Kachel-Layout und Spaltenanzahl</string>
+    <string name="qs_columns_portrait_title">QS-Spalten im Hochformat</string>
+    <string name="qs_columns_landscape_title">QS-Spalten im Querformat</string>
+    <string name="qs_tile_vertical_layout_title">QS Vertikales Layout</string>
+    <string name="qs_tile_vertical_layout_summary">Vertikales Kachel-Layout aktivieren</string>
+    <string name="qs_tile_title_visibility_title">Titel ausblenden</string>
+    <string name="qs_tile_title_visibility_summary">Aktivieren um QS-Kacheltitel auszublenden</string>
 </resources>
