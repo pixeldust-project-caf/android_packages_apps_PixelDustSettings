@@ -478,4 +478,8 @@
     <!-- click to take partial screenshot -->
     <string name="click_partial_screenshot_title">Partielles Bildschirmfoto per Tasten-Kombination</string>
     <string name="click_partial_screenshot_summary">Lautstärketaste nach unten und Ein-/Aus-Taste kurz drücken, um ein partielles Bildschirmfoto zu erstellen</string>
+
+    <!-- QS Transparency -->
+    <string name="qs_transparency_title">Transparenzstufe</string>
+    <string name="qs_transparency_summary">Transparenzstufe für den QS-Hintergrund festlegen</string>
 </resources>
