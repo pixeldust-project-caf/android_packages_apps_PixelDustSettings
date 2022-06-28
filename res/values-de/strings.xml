@@ -474,4 +474,8 @@
     <string name="qs_tile_vertical_layout_summary">Vertikales Kachel-Layout aktivieren</string>
     <string name="qs_tile_title_visibility_title">Titel ausblenden</string>
     <string name="qs_tile_title_visibility_summary">Aktivieren um QS-Kacheltitel auszublenden</string>
+
+    <!-- click to take partial screenshot -->
+    <string name="click_partial_screenshot_title">Partielles Bildschirmfoto per Tasten-Kombination</string>
+    <string name="click_partial_screenshot_summary">Lautstärketaste nach unten und Ein-/Aus-Taste kurz drücken, um ein partielles Bildschirmfoto zu erstellen</string>
 </resources>

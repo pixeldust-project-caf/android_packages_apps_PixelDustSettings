@@ -478,4 +478,8 @@
     <string name="qs_tile_vertical_layout_summary">Enable tile vertical layout</string>
     <string name="qs_tile_title_visibility_title">Hide titles</string>
     <string name="qs_tile_title_visibility_summary">Enable to hide QS tile titles</string>
+
+    <!-- click to take partial screenshot -->
+    <string name="click_partial_screenshot_title">Click to partial screenshot</string>
+    <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
 </resources>
