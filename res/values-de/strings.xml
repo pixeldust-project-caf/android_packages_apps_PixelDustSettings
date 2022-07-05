@@ -176,7 +176,6 @@
     <string name="quick_pulldown_left">Statusleiste von links herunterziehen</string>
 
     <!-- Lockscreen media artwork -->
-    <string name="lockscreen_media_blur_title">Unschärfegrad für Albumcovergrafik einstellen</string>
     <string name="show_lockscreen_media_art_title">Albumcover</string>
     <string name="lockscreen_media_art_options_title">Albumcover auf dem Sperrbildschirm anzeigen</string>
 
