@@ -481,4 +481,13 @@
     <!-- QS Transparency -->
     <string name="qs_transparency_title">Transparenzstufe</string>
     <string name="qs_transparency_summary">Transparenzstufe für den QS-Hintergrund festlegen</string>
+
+    <!-- Media artwork -->
+    <string name="media_category">Medienbenachrichtigungen</string>
+    <string name="artwork_media_background_title">Albumcover</string>
+    <string name="artwork_media_background_summary">Albumcover als Hintergrund für Benachrichtigungsmedien festlegen</string>
+    <string name="artwork_media_background_enable_blur_title">Unschärfe der Albumcovergrafik</string>
+    <string name="artwork_media_background_blur_radius_title">Unschärfegrad der Albumcovergrafik</string>
+<string name="artwork_media_background_fade_filter_title">Überblendungsgrad der Albumcovergrafik</string>
+    <string name="artwork_media_background_alpha_title">Transparenz der Albumcovergrafik</string>
 </resources>
