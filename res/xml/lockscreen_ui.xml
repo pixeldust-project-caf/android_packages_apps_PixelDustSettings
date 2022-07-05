@@ -49,8 +49,8 @@
         android:key="lockscreen_media_art_options"
         android:title="@string/lockscreen_media_art_options_title" >
 
-        <com.pixeldust.support.preference.SystemSettingSwitchPreference
-            android:key="show_lockscreen_media_art"
+        <com.pixeldust.support.preference.SecureSettingSwitchPreference
+            android:key="lockscreen_media_metadata"
             android:title="@string/show_lockscreen_media_art_title"
             android:defaultValue="true" />
 
