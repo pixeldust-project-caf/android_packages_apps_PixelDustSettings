@@ -48,7 +48,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
 
     private ListPreference mQuickPulldown;
     private Preference mQSLayoutColumns;
-    private Preference mQSLayoutColumnsLandscape;
     private Preference mQSTileVerticalLayout;
     private Preference mQSTileLabelHide;
 
@@ -70,8 +69,6 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
 
         mQSLayoutColumns = (Preference) findPreference("qs_layout_columns");
         mQSLayoutColumns.setOnPreferenceChangeListener(this);
-        mQSLayoutColumnsLandscape = (Preference) findPreference("qs_layout_columns_landscape");
-        mQSLayoutColumnsLandscape.setOnPreferenceChangeListener(this);
         mQSTileVerticalLayout = (Preference) findPreference("qs_tile_vertical_layout");
         mQSTileVerticalLayout.setOnPreferenceChangeListener(this);
         mQSTileLabelHide = (Preference) findPreference("qs_tile_label_hide");
@@ -100,7 +97,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements OnPrefe
             mQuickPulldown.setSummary(
                     mQuickPulldown.getEntries()[index]);
             return true;
-        } else if (preference == mQSLayoutColumns || preference == mQSLayoutColumnsLandscape
+        } else if (preference == mQSLayoutColumns
                 || preference == mQSTileVerticalLayout || preference == mQSTileLabelHide) {
             PixeldustUtils.showSystemUiRestartDialog(getContext());
             return true;
